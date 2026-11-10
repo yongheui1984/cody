@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 무비 어워즈 - 티어리스트</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    color: #f5e9c8;
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse 900px 420px at 50% -80px, rgba(255, 210, 120, .55), transparent 60%),
+      radial-gradient(ellipse 500px 700px at 8% 20%, rgba(255, 190, 90, .14), transparent 60%),
+      radial-gradient(ellipse 500px 700px at 92% 20%, rgba(255, 190, 90, .14), transparent 60%),
+      linear-gradient(180deg, #1a0f14 0%, #3a1522 30%, #12090d 70%, #070405 100%);
+    display: flex; flex-direction: column; align-items: center;
+    min-width: 320px;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .5;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(255,220,150,.9) 0 2px, transparent 3px),
+      radial-gradient(circle at 28% 5%, rgba(255,220,150,.7) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 70% 6%, rgba(255,220,150,.8) 0 2px, transparent 3px),
+      radial-gradient(circle at 88% 10%, rgba(255,220,150,.7) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 45% 12%, rgba(255,220,150,.6) 0 1.5px, transparent 2.5px);
+  }
+  header { text-align: center; padding: 26px 16px 10px; z-index: 1; }
+  header .kicker {
+    display: inline-block; font-size: 13px; letter-spacing: 6px; color: #ffd98a;
+    border-top: 1px solid #c9a24b; border-bottom: 1px solid #c9a24b;
+    padding: 6px 14px; margin-bottom: 12px;
+  }
+  header h1 {
+    font-size: clamp(26px, 4.5vw, 46px); font-weight: 800; color: #ffe9b0;
+    text-shadow: 0 2px 18px rgba(255, 190, 80, .35); letter-spacing: 2px;
+  }
+  header p { margin-top: 8px; font-size: 14px; color: #d9c493; }
+  main { width: min(1100px, 96vw); z-index: 1; display: flex; flex-direction: column; align-items: center; }
+  #board {
+    width: 100%; padding: 18px 14px 20px; border: 1px solid rgba(201,162,75,.6);
+    border-radius: 14px; background: rgba(0,0,0,.45);
+    box-shadow: 0 10px 40px rgba(0,0,0,.5), inset 0 0 60px rgba(255,190,90,.06);
+  }
+  .tier { display: flex; justify-content: center; margin: 8px 0; }
+  .tier-inner {
+    display: flex; align-items: stretch; gap: 10px;
+    border-radius: 10px; padding: 8px 10px;
+    border: 2px solid #888; background: rgba(128,128,128,.15);
+    transition: background .2s, border-color .2s;
+    max-width: 100%; flex-wrap: wrap; justify-content: center;
+  }
+  .tier-inner[data-state="empty"] { border-color: #8a8a8a; background: rgba(130,130,130,.16); }
+  .tier-inner[data-state="lack"]  { border-color: #d8b400; background: rgba(216,180,0,.14); }
+  .tier-inner[data-state="full"]  { border-color: #2ecc71; background: rgba(46,204,113,.14); }
+  .tier-inner[data-state="over"]  { border-color: #e74c3c; background: rgba(231,76,60,.16); }
+  .badge {
+    min-width: 56px; display: flex; align-items: center; justify-content: center;
+    font-size: 30px; font-weight: 900; border-radius: 8px; padding: 6px 10px; color: #111;
+  }
+  .badge.s { background: linear-gradient(180deg, #ffe27a, #d4a017); }
+  .badge.a { background: linear-gradient(180deg, #ffc46b, #e08a00); }
+  .badge.b { background: linear-gradient(180deg, #e8e8e8, #9a9a9a); }
+  .badge.c { background: linear-gradient(180deg, #d9a05f, #8a5a1e); }
+  .badge.d { background: linear-gradient(180deg, #9db3c8, #4a6076); color: #fff; }
+  .slots { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; min-height: 118px; align-items: center; }
+  .slot {
+    width: 86px; height: 118px; border: 2px dashed rgba(255,255,255,.55);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: rgba(255,255,255,.6);
+  }
+  .card {
+    width: 86px; height: 118px; border-radius: 8px; overflow: hidden; cursor: grab;
+    border: 2px solid #fff3; background: #222; user-select: none; flex-shrink: 0;
+    display: flex; flex-direction: column;
+  }
+  .card:active { cursor: grabbing; }
+  .card.dragging { opacity: .4; }
+  .card .poster { flex: 1; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: #fff; text-align: center; padding: 4px;
+    text-shadow: 0 1px 4px rgba(0,0,0,.7); }
+  .card .cap { font-size: 11px; text-align: center; background: rgba(0,0,0,.75);
+    color: #ffe9b0; padding: 3px 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tier .card { width: 80px; height: 110px; }
+  section.tray-wrap { width: 100%; margin-top: 16px; }
+  section.tray-wrap h2 { font-size: 15px; color: #ffd98a; margin-bottom: 8px; text-align: center; }
+  #tray {
+    overflow: hidden; border: 1px solid rgba(201,162,75,.5); border-radius: 12px;
+    background: rgba(0,0,0,.5); padding: 10px 0; min-height: 150px;
+  }
+  #tray.drag-over { outline: 2px dashed #ffd98a; }
+  #track { display: flex; gap: 10px; padding: 4px 10px; width: max-content; will-change: transform; }
+  #trayHint { text-align: center; font-size: 12px; color: #cbb37e; padding: 6px 0 2px; }
+  .controls { display: flex; gap: 12px; margin: 18px 0 30px; z-index: 1; }
+  .controls button {
+    font-size: 16px; font-weight: 700; padding: 12px 26px; border-radius: 10px; cursor: pointer;
+    border: 1px solid #c9a24b;
+  }
+  #btnSave { background: linear-gradient(180deg, #ffe27a, #c9962e); color: #3a2703; }
+  #btnReset { background: transparent; color: #ffe9b0; }
+  #btnSave:hover { filter: brightness(1.08); }
+  #btnReset:hover { background: rgba(255,255,255,.08); }
+  #msg { min-height: 22px; font-size: 13px; color: #9fe6a0; z-index: 1; }
+  @media (max-width: 640px), (orientation: portrait) and (max-width: 700px) {
+    .tier-inner { width: 100%; }
+    .slots { min-height: 100px; }
+    .slot, .card { width: 72px; height: 102px; }
+    .tier .card { width: 68px; height: 96px; }
+    .controls { flex-direction: column; width: min(420px, 92vw); }
+    .controls button { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">★ 2026 AWARDS SEASON ★</div>
+  <h1>2026 무비 어워즈</h1>
+  <p>2026년 개봉 · 관객 100만 이상 15편 티어리스트 (방송용)</p>
+</header>
+<main>
+  <div id="board" aria-label="티어 표">
+    <div class="tier"><div class="tier-inner" data-tier="S" data-state="empty"><div class="badge s">S</div><div class="slots"></div></div></div>
+    <div class="tier"><div class="tier-inner" data-tier="A" data-state="empty"><div class="badge a">A</div><div class="slots"></div></div></div>
+    <div class="tier"><div class="tier-inner" data-tier="B" data-state="empty"><div class="badge b">B</div><div class="slots"></div></div></div>
+    <div class="tier"><div class="tier-inner" data-tier="C" data-state="empty"><div class="badge c">C</div><div class="slots"></div></div></div>
+    <div class="tier"><div class="tier-inner" data-tier="D" data-state="empty"><div class="badge d">D</div><div class="slots"></div></div></div>
+  </div>
+  <section class="tray-wrap">
+    <h2>▼ 영화 슬라이드 — 카드를 티어로 드래그하세요 ▼</h2>
+    <div id="tray"><div id="track"></div></div>
+    <div id="trayHint">슬라이드는 자동으로 흐릅니다. 카드를 잡으면 멈춥니다.</div>
+  </section>
+  <div class="controls">
+    <button id="btnSave">이미지 저장</button>
+    <button id="btnReset">초기화</button>
+  </div>
+  <div id="msg" role="status"></div>
+</main>
+<script>
+"use strict";
+/* 2026 무비 어워즈 티어리스트 (단일 파일, 외부 의존성 없음) */
+var MOVIES = [
+  { id: "m1",  title: "검은 파도",   c1: "#0f2027", c2: "#2c5364" },
+  { id: "m2",  title: "한강의 기적", c1: "#134e5e", c2: "#71b280" },
+  { id: "m3",  title: "겨울 편지",   c1: "#3a1c71", c2: "#d76d77" },
+  { id: "m4",  title: "무명 검사",   c1: "#232526", c2: "#414345" },
+  { id: "m5",  title: "달빛 특급",   c1: "#141e30", c2: "#8e9eab" },
+  { id: "m6",  title: "불꽃 도시",   c1: "#cb2d3e", c2: "#ef473a" },
+  { id: "m7",  title: "그림자 추적", c1: "#000428", c2: "#004e92" },
+  { id: "m8",  title: "봄날의 약속", c1: "#1d6b3c", c2: "#a8e063" },
+  { id: "m9",  title: "태풍 전야",   c1: "#2b5876", c2: "#4e4376" },
+  { id: "m10", title: "로봇 엄마",   c1: "#8e2de2", c2: "#4a00e0" },
+  { id: "m11", title: "사막의 왕",   c1: "#c97a10", c2: "#ffd200" },
+  { id: "m12", title: "심해 탈출",   c1: "#001510", c2: "#00bf8f" },
+  { id: "m13", title: "마지막 공연", c1: "#ad5389", c2: "#3c1053" },
+  { id: "m14", title: "도시의 밤",   c1: "#0f0c29", c2: "#5a4fcf" },
+  { id: "m15", title: "황금 정원",   c1: "#8a5a1e", c2: "#d4a017" }
+];
+var CAP = { S: 1, A: 2, B: 3, C: 4, D: 5 };
+var ORDER = ["S", "A", "B", "C", "D"];
+var KEY = "movieTierB_v1";
+var SPEED = 1.2; // 슬라이드 속도(px/프레임)
+
+var loc = null;
+var paused = false;
+
+function allIds() { return MOVIES.map(function (m) { return m.id; }); }
+function freshLoc() {
+  return { S: [], A: [], B: [], C: [], D: [], tray: allIds() };
+}
+function load() {
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (!raw) { loc = freshLoc(); return; }
+    var data = JSON.parse(raw);
+    var ids = {};
+    loc = freshLoc();
+    ORDER.concat(["tray"]).forEach(function (k) {
+      var arr = (data && data[k]) || [];
+      loc[k] = arr.filter(function (id) {
+        if (!movieById(id) || ids[id]) return false;
+        ids[id] = true;
+        return true;
+      });
+    });
+    allIds().forEach(function (id) { if (!ids[id]) loc.tray.push(id); });
+  } catch (e) { loc = freshLoc(); }
+}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(loc)); } catch (e) {}
+}
+function movieById(id) {
+  for (var i = 0; i < MOVIES.length; i++) if (MOVIES[i].id === id) return MOVIES[i];
+  return null;
+}
+function tierState(t) {
+  var n = loc[t].length, c = CAP[t];
+  if (n === 0) return "empty";
+  if (n < c) return "lack";
+  if (n === c) return "full";
+  return "over";
+}
+function moveMovie(id, to) {
+  if (!movieById(id)) return;
+  ORDER.concat(["tray"]).forEach(function (k) {
+    loc[k] = loc[k].filter(function (x) { return x !== id; });
+  });
+  loc[to].push(id);
+  save();
+  render();
+}
+function makeCard(m) {
+  var el = document.createElement("div");
+  el.className = "card";
+  el.draggable = true;
+  el.dataset.id = m.id;
+  var p = document.createElement("div");
+  p.className = "poster";
+  p.style.background = "linear-gradient(135deg," + m.c1 + "," + m.c2 + ")";
+  p.textContent = m.title;
+  var c = document.createElement("div");
+  c.className = "cap";
+  c.textContent = m.title;
+  el.appendChild(p);
+  el.appendChild(c);
+  el.addEventListener("dragstart", function (e) {
+    e.dataTransfer.setData("text/plain", m.id);
+    paused = true;
+  });
+  el.addEventListener("dragend", function () { paused = false; });
+  el.addEventListener("pointerdown", function () { paused = true; });
+  el.addEventListener("pointerup", function () { paused = false; });
+  return el;
+}
+function makeSlot() {
+  var el = document.createElement("div");
+  el.className = "slot";
+  el.textContent = "빈 칸";
+  return el;
+}
+function render() {
+  var track = document.getElementById("track");
+  track.innerHTML = "";
+  var trayCards = loc.tray.map(function (id) { return makeCard(movieById(id)); });
+  trayCards.concat(trayCards.map(function (card) {
+    var m = movieById(card.dataset.id);
+    var dup = makeCard(m);
+    dup.setAttribute("aria-hidden", "true");
+    return dup;
+  })).forEach(function (card) { track.appendChild(card); });
+
+  var tiers = document.querySelectorAll(".tier-inner");
+  for (var i = 0; i < tiers.length; i++) {
+    (function (tierEl) {
+      var t = tierEl.dataset.tier;
+      var slots = tierEl.querySelector(".slots");
+      slots.innerHTML = "";
+      var placed = loc[t];
+      for (var k = 0; k < CAP[t]; k++) {
+        if (placed[k]) slots.appendChild(makeCard(movieById(placed[k])));
+        else slots.appendChild(makeSlot());
+      }
+      placed.slice(CAP[t]).forEach(function (id) {
+        slots.appendChild(makeCard(movieById(id)));
+      });
+      tierEl.dataset.state = tierState(t);
+    })(tiers[i]);
+  }
+}
+function say(text) {
+  var msg = document.getElementById("msg");
+  if (msg) msg.textContent = text;
+}
+function tick() {
+  var tray = document.getElementById("tray");
+  var track = document.getElementById("track");
+  if (!paused && track.children.length > 0 && track.scrollWidth > 0) {
+    tray.scrollLeft += SPEED;
+    if (tray.scrollLeft >= track.scrollWidth / 2) {
+      tray.scrollLeft -= track.scrollWidth / 2;
+    }
+  }
+  requestAnimationFrame(tick);
+}
+function exportPNG() {
+  var W = 1920, H = 1080;
+  var cv = document.createElement("canvas");
+  cv.width = W; cv.height = H;
+  var g = cv.getContext("2d");
+  var bg = g.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, "#3a1522");
+  bg.addColorStop(0.35, "#1a0d12");
+  bg.addColorStop(1, "#070405");
+  g.fillStyle = bg;
+  g.fillRect(0, 0, W, H);
+  var glow = g.createRadialGradient(W / 2, -60, 50, W / 2, -60, 700);
+  glow.addColorStop(0, "rgba(255,215,130,0.85)");
+  glow.addColorStop(1, "rgba(255,215,130,0)");
+  g.fillStyle = glow;
+  g.fillRect(0, 0, W, 500);
+  g.fillStyle = "rgba(255,220,150,0.8)";
+  for (var s = 0; s < 60; s++) {
+    var sx = (s * 373) % W, sy = (s * 197) % 220;
+    g.fillRect(sx, sy, 3, 3);
+  }
+  g.textAlign = "center";
+  g.fillStyle = "#ffe9b0";
+  g.font = "800 88px sans-serif";
+  g.fillText("2026 무비 어워즈", W / 2, 140);
+  g.fillStyle = "#d9c493";
+  g.font = "400 30px sans-serif";
+  g.fillText("2026년 개봉 · 관객 100만 이상 15편 티어리스트", W / 2, 190);
+
+  var labels = { S: "S", A: "A", B: "B", C: "C", D: "D" };
+  var labelColors = { S: "#ffd94d", A: "#ffab4d", B: "#cfcfcf", C: "#d9a05f", D: "#9db3c8" };
+  var cardW = 150, cardH = 118, gap = 14, labelW = 110, rowH = 148;
+  var y = 235;
+  ORDER.forEach(function (t) {
+    var placed = loc[t];
+    var n = Math.max(placed.length, CAP[t]);
+    var groupW = labelW + gap + n * (cardW + gap);
+    var x = (W - groupW) / 2;
+    g.fillStyle = labelColors[t];
+    g.fillRect(x, y, labelW, cardH);
+    g.fillStyle = "#111";
+    g.font = "900 64px sans-serif";
+    g.fillText(labels[t], x + labelW / 2, y + 84);
+    var cx = x + labelW + gap;
+    for (var k = 0; k < n; k++) {
+      if (placed[k]) {
+        var m = movieById(placed[k]);
+        var grad = g.createLinearGradient(cx, y, cx + cardW, y + cardH);
+        grad.addColorStop(0, m.c1);
+        grad.addColorStop(1, m.c2);
+        g.fillStyle = grad;
+        g.fillRect(cx, y, cardW, cardH);
+        g.fillStyle = "rgba(0,0,0,0.55)";
+        g.fillRect(cx, y + cardH - 34, cardW, 34);
+        g.fillStyle = "#fff";
+        g.font = "700 22px sans-serif";
+        var title = m.title.length > 6 ? m.title.slice(0, 6) + "…" : m.title;
+        g.fillText(title, cx + cardW / 2, y + cardH - 9);
+      } else {
+        g.strokeStyle = "rgba(255,255,255,0.6)";
+        g.lineWidth = 2;
+        if (g.setLineDash) g.setLineDash([8, 6]);
+        g.strokeRect(cx, y, cardW, cardH);
+        if (g.setLineDash) g.setLineDash([]);
+      }
+      cx += cardW + gap;
+    }
+    y += rowH;
+  });
+
+  var a = document.createElement("a");
+  a.download = "2026-무비-어워즈-티어리스트.png";
+  a.href = cv.toDataURL("image/png");
+  a.click();
+  say("티어 표 이미지를 저장했습니다.");
+}
+function init() {
+  load();
+  render();
+  var tiers = document.querySelectorAll(".tier-inner");
+  for (var i = 0; i < tiers.length; i++) {
+    (function (tierEl) {
+      var t = tierEl.dataset.tier;
+      var slots = tierEl.querySelector(".slots");
+      slots.addEventListener("dragover", function (e) { e.preventDefault(); });
+      slots.addEventListener("drop", function (e) {
+        e.preventDefault();
+        paused = false;
+        var id = e.dataTransfer.getData("text/plain");
+        moveMovie(id, t);
+        say("“" + (movieById(id) ? movieById(id).title : "") + "”을(를) " + t + "티어에 배치했습니다.");
+      });
+    })(tiers[i]);
+  }
+  var tray = document.getElementById("tray");
+  tray.addEventListener("dragover", function (e) { e.preventDefault(); });
+  tray.addEventListener("drop", function (e) {
+    e.preventDefault();
+    paused = false;
+    var id = e.dataTransfer.getData("text/plain");
+    moveMovie(id, "tray");
+    say("슬라이드로 되돌렸습니다.");
+  });
+  document.getElementById("btnSave").addEventListener("click", exportPNG);
+  document.getElementById("btnReset").addEventListener("click", function () {
+    if (typeof confirm === "function" && !confirm("맨 처음 상태로 되돌릴까요?")) return;
+    loc = freshLoc();
+    save();
+    render();
+    say("처음 상태로 되돌렸습니다.");
+  });
+  requestAnimationFrame(tick);
+}
+init();
+</script>
+</body>
+</html>
