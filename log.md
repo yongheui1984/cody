@@ -14,3 +14,12 @@
 - Saved image: 1920x1080 PNG, file name `movie_tierlist_2026.png`.
 - Layout: follows the window size; below about 36px slot width it stops shrinking.
 - Tier over capacity: the row widens to keep card size; it only shrinks cards when the window is too narrow.
+
+## 2026-11-10 영화_A_수정.html (left auto-align fix)
+
+- Deliverable: `영화_A_수정.html`, copied from `영화_A_초안.html`. The draft is left untouched.
+- Problem: a poster dropped on a tier stayed in the box where it was dropped (gaps on the left), and dropping on an already filled box pushed the old card to a "next free box" instead of inserting.
+- Change: only `normalize()` and `dropTo()` in the script. Cards in every tier are now kept packed from the left; the free boxes are always on the right. A drop inserts the card at the dropped position (an empty box means the end of the row). Everything else (layout, colors, slide, save, reset) is unchanged.
+- Over capacity still works as before: the extra card goes after the last box and the tier turns red.
+- Saved state: same localStorage key, so a layout saved with gaps is packed to the left on the next open.
+- Spec note: `기획서.md` does not state this rule; the left-packed behavior was requested by the user after trying the draft.
