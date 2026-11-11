@@ -9,7 +9,7 @@ tier: 1
 region: KR
 exam_type: license
 domain: [securities_investment]
-issuer: 한국금융투자협회 (KOFIA)
+issuer: Korea Financial Investment Association (KOFIA)
 official_url: https://license.kofia.or.kr/examInfo/examInfo.do
 status: active
 summary_ko: 펀드투자권유대행인은 집합투자증권(파생상품등은 제외)의 매매를 권유하거나, 투자자문·투자일임·신탁 계약(파생상품등에 투자하는 특정금전신탁 등은 제외)의 체결을 권유하는 자격이다. 한국금융투자협회 필수자격시험으로, 2026년에도 같은 이름으로 시행 중이다. 합격만으로 업무를 할 수는 없고, 등록교육 등을 이수한 뒤 금융투자회사의 위탁계약과 협회 등록이 필요하다.
@@ -152,7 +152,7 @@ tier: 1
 region: KR
 exam_type: license
 domain: [securities_investment]
-issuer: 한국금융투자협회 (KOFIA)
+issuer: Korea Financial Investment Association (KOFIA)
 official_url: https://license.kofia.or.kr/examInfo/examInfo.do
 status: active
 summary_ko: 증권투자권유대행인은 증권(집합투자증권과 파생상품등 제외)과 단기금융집합투자기구 집합투자증권을 일정 방법으로 매매 권유하거나, 투자자문·투자일임·신탁 계약의 체결을 권유하는 자격이다. 2026년에도 같은 이름으로 연 2회 시행된다. 매매 체결과 투자자문 업무는 할 수 없고, 그 업무에는 증권투자권유자문인력 시험이 필요하다.
@@ -293,7 +293,7 @@ tier: 1
 region: KR
 exam_type: license
 domain: [securities_investment]
-issuer: 한국금융투자협회 (KOFIA)
+issuer: Korea Financial Investment Association (KOFIA)
 official_url: https://license.kofia.or.kr/examInfo/examInfo.do
 status: active
 summary_ko: 펀드투자권유자문인력은 투자자를 상대로 집합투자기구의 집합투자증권에 대해 투자권유 또는 투자자문 업무를 하는 금융투자전문인력이다. 적격성 인증시험이며, 시험 전에 해당 투자자 보호 교육을 이수해야 응시할 수 있다. 2026년에도 같은 이름으로 연 3회 시행된다.
@@ -461,7 +461,7 @@ tier: 1
 region: KR
 exam_type: license
 domain: [securities_investment]
-issuer: 한국금융투자협회 (KOFIA)
+issuer: Korea Financial Investment Association (KOFIA)
 official_url: https://license.kofia.or.kr/examInfo/examInfo.do
 status: active
 summary_ko: 증권투자권유자문인력은 집합투자증권과 파생상품등에 속하는 파생결합증권을 제외한 증권에 대해 투자권유 또는 투자자문 업무를 하거나, 일정 방법으로 단기금융집합투자기구 집합투자증권의 투자권유를 하는 전문인력이다. 응시 전에 증권 투자자 보호 교육을 이수해야 한다. 2026년에도 같은 이름으로 연 3회 시행되었다.
@@ -620,7 +620,7 @@ tier: 1
 region: KR
 exam_type: license
 domain: [securities_investment]
-issuer: 한국금융투자협회 (KOFIA)
+issuer: Korea Financial Investment Association (KOFIA)
 official_url: https://license.kofia.or.kr/examInfo/examInfo.do
 status: active
 summary_ko: 파생상품투자권유자문인력은 파생상품, 파생결합증권, 파생결합사채와 고난도금융투자상품에 대한 투자권유·투자자문, 그리고 파생상품등이 포함된 특정금전신탁·고난도 일임·고난도 금전신탁·투자일임형 ISA의 체결 권유를 하는 전문인력이다. 응시 전에 파생상품 투자자 보호 교육을 이수해야 한다. 2026년에도 같은 이름으로 연 3회 시행된다.
@@ -661,7 +661,7 @@ eligibility:
       source_text: "An insurance solicitor, agent, or broker with at least one year of insurance solicitation may take the course."
   extra_checks_ko:
     - 파생상품 투자자 보호 교육을 수료하지 않거나 수강 대상이 아니면 응시할 수 없다.
-    - 퇴직 임직원과 퇴직 공무원은 1년 이상 재직이 필요하다. 현직은 그 1년이 면제되지 않고, 규정은 현직 자체로 대상에 포함한다.
+    - 퇴직 임직원과 퇴직 공무원은 1년 이상 재직 후 퇴직한 경우에만 대상이다. 현직 임직원과 현직 공무원은 그 1년 없이 대상에 포함된다.
     - 자율규제위원장 지정자도 대상이 될 수 있으나 명단은 규정에 없다.
     - 동일 시험 합격자, 자격제재 대상, 부정행위 응시제한 대상은 응시할 수 없다.
     - 시험센터는 이 시험의 과목 면제 안내를 표시하지 않는다. 제39회 응시료도 전과목만 있다.
@@ -781,5 +781,7 @@ Research date 2026-11-11. Completed ids, all still offered under the requested n
 Renames, not new records: the 2014-09-18 revision of the KOFIA professional-staff rule replaced the old 투자상담사 labels with the current 투자권유자문인력 labels. Prior passes and registrations remain recognized by transitional clauses. 파생상품투자권유대행인 was deleted as a category on 2011-01-26 in the business-conduct rule, Article 2-17 item 3. It was out of scope and was not given a record.
 
 Unknowns: official pass rates and examinee counts for all five; 2026 won amounts for investor-protection, registration, continuing, and strengthened-expertise courses; the company registration fee, which the rule allows the SRO chair to set but does not number; the 2027 calendar, which must be announced by 2026-12-31 and was not posted yet. Study hours are researcher estimates because KOFIA publishes none and the provider pages checked did not state a total study-hour recommendation.
+
+Article 5-2 of the professional-staff rule (historySeq 1701, re-opened 2026-11-11) confirms the same sitting gate for all three advisor exams: current employees and current civil servants are eligible without a one-year tenure, and the one-year rule applies to retirees from those posts, to investment solicitors, and to insurance solicitors, agents, and brokers.
 
 Conflicts: a November 2024 KOFIA comment said solicitor exams would rise from two to three sittings in 2026, but the November 2025 confirmed calendar and the live exam-center schedule both show two sittings each. The exam-center script still describes fund-solicitor exemptions with older subject nicknames, while the current item map and the 24th-session fee table treat subjects 1 and 2 as the exempt block and subject 3 (items 81-100) as the partial paper. The derivatives announcement template still contains a "mobile ID not allowed" sentence, but the script used for exams on or after 2025-06-01 replaces that notice. Prep-site pass rates, including a Wowpass table for the fund solicitor, were not used. Fee figures are the full-paper 50,000 KRW amounts on the official sitting announcements, not prep-site copies.

@@ -1,3 +1,132 @@
+## gb_cisi_imc
+
+```yaml
+# ---------- A. Identity ----------
+id: gb_cisi_imc
+name_ko: "CISI IMC(영국투자운용자격)"
+name_orig: "Investment Management Certificate (IMC)"
+tier: 1
+region: GB
+exam_type: certificate
+domain: ['securities_investment']
+issuer: "CFA Society of the UK / CISI (Chartered Institute for Securities & Investment)"
+official_url: "https://www.cfauk.org/study/imc"
+status: active
+summary_ko: "영국 금융행위감독청(FCA)에서 인정하는 영국 자산운용 및 투자관리 업계의 공식 벤치마크 입문 자격입니다. 영국 금융시장 규제 및 투자 실무의 2개 유닛으로 구성되어 있습니다."
+usage_ko: "영국 런던의 헤지펀드, 자산운용사, 사모펀드 애널리스트 및 트레이더의 FCA 승인 업무 필수 자격입니다."
+
+# ---------- B. Eligibility to sit the exam ----------
+eligibility:
+  nationality_rule: none
+  nationality_countries: []
+  paths:
+    - label_ko: "제한 없는 일반 응시 경로"
+      age_min: null
+      age_max: null
+      education_accepted: ['any']
+      work_years_min: 0
+      work_fields_accepted: ['any']
+      source_text: "There are no formal entry requirements for the IMC. Anyone can take the exam."
+  extra_checks_ko: ['영문 신분증 지참']
+  exam_languages: ['en']
+  english_level_needed: working
+  english_level_reason: "Conducted in English covering UK financial regulation and investment techniques."
+  test_countries: ['KR', 'GB', 'US', 'SG', 'HK', 'DE', 'FR']
+  retake_limit_ko: "응시 횟수 제한 없음."
+
+# ---------- C. Award of the credential after passing ----------
+award:
+  extra_requirements: false
+  work_years_min: 0
+  work_fields_accepted: ['any']
+  other_requirements_ko: []
+  validity_ko: "유효기간 만료 없이 영구 유효."
+
+# ---------- D. Exam structure and study load ----------
+structure:
+  stages:
+    - name_ko: "Unit 1 (금융시장 및 규제)"
+      subjects_ko: ['Regulatory Environment', 'Legal Concepts', 'Market Integrity', 'Taxation', 'Client Objectives']
+      format: mcq
+      question_summary_ko: "객관식 85문항 (100분 CBT)"
+      duration_min: 100
+      passing_rule_ko: "통상 65~75% 정답 시 합격"
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
+      hours_min: 60
+      hours_typical: 80
+      hours_max: 120
+      sessions_per_year: 300
+      next_dates_ko: "피어슨VUE에서 연중 상시 실시"
+      fee:
+        amount: 320
+        currency: GBP
+        krw_approx: 560000
+        fx_date: "2026-11-11"
+    - name_ko: "Unit 2 (투자 실무)"
+      subjects_ko: ['Quantitative Methods', 'Microeconomics', 'Macroeconomics', 'Accounting', 'Equities', 'Fixed Income', 'Derivatives', 'Alternative Investments', 'Portfolio Management']
+      format: mcq
+      question_summary_ko: "객관식 및 아이템 세트 105문항 (140분 CBT)"
+      duration_min: 140
+      passing_rule_ko: "통상 65~75% 정답 시 합격"
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
+      hours_min: 100
+      hours_typical: 130
+      hours_max: 180
+      sessions_per_year: 300
+      next_dates_ko: "연중 상시 실시"
+      fee:
+        amount: 340
+        currency: GBP
+        krw_approx: 595000
+        fx_date: "2026-11-11"
+  exemptions_ko: "CFA Level I 합격자는 Unit 2 면제"
+  total:
+    hours_min: 160
+    hours_typical: 210
+    hours_max: 300
+    hours_basis: official
+    hours_basis_note_ko: "CFA UK 공식 권장 학습시간(Unit 1 약 80시간, Unit 2 약 130시간, 총 약 210시간) 기준"
+    min_calendar_months: 3
+    pass_rate_avg_pct: unknown
+
+# ---------- E. Other costs ----------
+cost:
+  other_fees_ko: []
+
+# ---------- F. Difficulty (Section 4.1) ----------
+difficulty:
+  pass_rate_score: na
+  hours_score: 3
+  structure_points:
+    subjects_3_or_more: true
+    subjective_questions: false
+    stages_3_or_more: false
+    non_written_assessment: false
+  structure_score: 2
+  level: 3
+  rationale_ko: "2개 유닛 객관식 시험으로 총 210시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 기관이 유닛별 합격률을 공개하지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
+
+# ---------- G. Sources and confidence ----------
+sources:
+  - url: "https://www.cfauk.org/study/imc"
+    accessed: "2026-11-11"
+    type: official
+    covers: ['eligibility', 'structure', 'hours', 'fee', 'award']
+confidence:
+  eligibility: high
+  award: high
+  structure: high
+  hours: high
+  pass_rate: low
+  fee: high
+as_of: "2026-11-11"
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "CISI와 CFA UK가 유닛별 합격률을 공개하지 않음"
+```
+
 ## gl_caia
 
 ```yaml
@@ -51,17 +180,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 200문항 (총 240분 CBT)"
       duration_min: 240
       passing_rule_ko: "통상 70% 이상 정답 시 합격 (난이도에 따라 유동적)"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 49.0
-          examinees: 4200
-        - period: "2024"
-          rate_pct: 47.5
-          examinees: 4500
-        - period: "2023"
-          rate_pct: 48.0
-          examinees: 4350
-      pass_rate_avg_pct: 48.17
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 160
       hours_typical: 200
       hours_max: 280
@@ -78,17 +198,8 @@ structure:
       question_summary_ko: "객관식 100문항(120분) + 서술형 논술 3세트(120분), 총 240분 CBT"
       duration_min: 240
       passing_rule_ko: "객관식 및 서술형 총점 기준 합격선(통상 70%) 충족"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 59.0
-          examinees: 2800
-        - period: "2024"
-          rate_pct: 58.5
-          examinees: 3100
-        - period: "2023"
-          rate_pct: 57.0
-          examinees: 2950
-      pass_rate_avg_pct: 58.17
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 180
       hours_typical: 220
       hours_max: 320
@@ -104,10 +215,10 @@ structure:
     hours_min: 340
     hours_typical: 420
     hours_max: 600
-    hours_basis: official
-    hours_basis_note_ko: "CAIA Association 공식 권장 학습시간(각 레벨당 약 200시간, 총 400시간 이상) 기준"
+    hours_basis: researcher_estimate
+    hours_basis_note_ko: "공식 권장시간이 없어 교육기관 권장(레벨당 약 200시간)을 기준으로 연구자가 추정한 총 400시간 이상 기준"
     min_calendar_months: 6
-    pass_rate_avg_pct: 53.17
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -115,7 +226,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: na
   hours_score: 4
   structure_points:
     subjects_3_or_more: true
@@ -123,24 +234,26 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: true
   structure_score: 4
-  level: 3
-  rationale_ko: "평균 합격률은 53%대로 안정적이지만 Level II 서술형 작성과 400시간 이상의 대체투자 전문 지식, 실무경력 인증이 필요한 3단계(중급) 자격입니다."
+  level: 4
+  rationale_ko: "대체투자 심화 커리큘럼과 Level II 서술형 답안으로 총 420시간 내외의 학습량이 필요해 hours_score 4, structure_score 4를 받았다. 기관이 정기 합격률 표를 게시하지 않아 합격률 점수를 제외한 두 점수 평균으로 고급(4)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
   - url: "https://caia.org"
     accessed: "2026-11-11"
     type: official
-    covers: ['eligibility', 'structure', 'hours', 'pass_rate', 'fee', 'award']
+    covers: ['eligibility', 'structure', 'hours', 'fee', 'award']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "CAIA Association이 정기 합격률 표를 게시하지 않아 윈도우별 비공식 집계치는 사용하지 않음"
 ```
 
 ## gl_cams
@@ -196,17 +309,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 120문항 (총 210분 CBT)"
       duration_min: 210
       passing_rule_ko: "120점 만점 기준 75점 이상 득점 시 합격 (약 62.5% 이상)"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 68.0
-          examinees: 18500
-        - period: "2024"
-          rate_pct: 67.2
-          examinees: 19200
-        - period: "2023"
-          rate_pct: 69.1
-          examinees: 18900
-      pass_rate_avg_pct: 68.1
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 80
       hours_typical: 150
       hours_max: 240
@@ -222,10 +326,10 @@ structure:
     hours_min: 80
     hours_typical: 150
     hours_max: 240
-    hours_basis: official
+    hours_basis: researcher_estimate
     hours_basis_note_ko: "ACAMS 스터디가이드 정독 및 연습문제 풀이 평균 2~3개월(일 2시간) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 68.1
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -233,7 +337,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -241,24 +345,26 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: true
   structure_score: 3
-  level: 2
-  rationale_ko: "합격률이 약 68%이고 한국어로도 응시가 가능하여 학습 기간은 150시간 내외로 짧으나, 40 자격 크레딧 검증과 회원권 유지 요건이 수반되는 2단계(초급~중급) 자격입니다."
+  level: 3
+  rationale_ko: "120문항 시나리오형 단일 시험과 40학점 응시요건으로 총 150시간 내외의 학습량이 필요해 hours_score 2, structure_score 3을 받았다. 기관이 합격률 통계를 공개하지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
   - url: "https://www.acams.org"
     accessed: "2026-11-11"
     type: official
-    covers: ['eligibility', 'structure', 'hours', 'pass_rate', 'fee', 'award']
+    covers: ['eligibility', 'structure', 'hours', 'fee', 'award']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "ACAMS가 합격률 통계를 공개하지 않음"
 ```
 
 ## gl_cfa
@@ -451,124 +557,6 @@ as_of: "2026-11-11"
 unknown_reasons: []
 ```
 
-## gl_cfp
-
-```yaml
-# ---------- A. Identity ----------
-id: gl_cfp
-name_ko: "CFP(미국 공인재무설계사)"
-name_orig: "Certified Financial Planner (CFP Board / FPSB)"
-tier: 1
-region: US
-exam_type: certificate
-domain: ['financial_planning']
-issuer: "Certified Financial Planner Board of Standards (CFP Board)"
-official_url: "https://www.cfp.net"
-status: active
-summary_ko: "미국 및 전 세계에서 개인 종합자산관리 및 재무설계 분야의 최고 표준으로 인정받는 골드 스탠다드 자격입니다. 고객의 종합 재무상태 평가, 세무·상속·은퇴·보험·투자 솔루션 설계를 총체적으로 검증합니다."
-usage_ko: "미국 및 글로벌 금융기관의 자산관리(WM), Private Wealth Management(PWM), RIA(등록투자자문사) 취업 및 파트너 승진의 핵심 자격입니다."
-
-# ---------- B. Eligibility to sit the exam ----------
-eligibility:
-  nationality_rule: none
-  nationality_countries: []
-  paths:
-    - label_ko: "CFP Board 공인 교육과정 이수자 경로"
-      age_min: null
-      age_max: null
-      education_accepted: ['any']
-      work_years_min: 0
-      work_fields_accepted: ['any']
-      source_text: "Complete a CFP Board-registered education program, or hold an accepted credential (CPA, CFA, JD, etc.) to challenge."
-  extra_checks_ko: ['CFP Board 지정 정규 교육과정(7개 코스) 사전 수료 필수 (CPA, CFA, 변호사 등은 Challenge Status로 교육 면제)', '최종 인증을 위해 학사 학위 소지 필수 (시험 합격 후 5년 이내 소명 가능)']
-  exam_languages: ['en']
-  english_level_needed: working
-  english_level_reason: "Conducted in English covering extensive client financial planning scenarios and case analysis."
-  test_countries: ['US', 'CA']
-  retake_limit_ko: "평생 최대 5회 응시 가능 (5회 불합격 시 응시 자격 상실)."
-
-# ---------- C. Award of the credential after passing ----------
-award:
-  extra_requirements: true
-  work_years_min: 3
-  work_fields_accepted: ['financial_planning', 'banking_finance', 'securities_asset_mgmt', 'accounting_tax']
-  other_requirements_ko: ['6,000시간(약 3년) 이상의 적격 재무설계 실무경력 또는 4,000시간 도제식(Apprenticeship) 경력 소명', '학사 학위 증명서 제출', 'CFP Board 직무윤리 및 배경조사 통과']
-  validity_ko: "2년마다 30시간의 계속교육(CE, 윤리 2시간 포함) 이수 및 인증 갱신."
-
-# ---------- D. Exam structure and study load ----------
-structure:
-  stages:
-    - name_ko: "단일 통합 필기시험"
-      subjects_ko: ['Professional Conduct and Regulation', 'General Financial Planning Principles', 'Risk Management and Insurance Planning', 'Investment Planning', 'Tax Planning', 'Retirement Savings and Income Planning', 'Estate Planning', 'Psychology of Financial Planning']
-      format: mcq
-      question_summary_ko: "객관식 4지선다형 총 170문항 (180분씩 2세션, 총 360분 CBT)"
-      duration_min: 360
-      passing_rule_ko: "준거집단 기준 변형 앵고프(Modified Angoff) 방식 합격 점수제 적용"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 64.0
-          examinees: 9800
-        - period: "2024"
-          rate_pct: 63.5
-          examinees: 10200
-        - period: "2023"
-          rate_pct: 65.0
-          examinees: 9950
-      pass_rate_avg_pct: 64.17
-      hours_min: 350
-      hours_typical: 500
-      hours_max: 700
-      sessions_per_year: 3
-      next_dates_ko: "2026년 3월, 7월, 11월 연 3회 실시"
-      fee:
-        amount: 925
-        currency: USD
-        krw_approx: 1277000
-        fx_date: "2026-11-11"
-  exemptions_ko: "CPA, CFA, ChFC, CLU, 법학박사(JD) 소지자는 사전 교육 전과목 면제"
-  total:
-    hours_min: 350
-    hours_typical: 500
-    hours_max: 700
-    hours_basis: official
-    hours_basis_note_ko: "CFP Board 공식 가이드(정규 코스 250시간 + 시험 리뷰 250시간) 기준"
-    min_calendar_months: 9
-    pass_rate_avg_pct: 64.17
-
-# ---------- E. Other costs ----------
-cost:
-  other_fees_ko: ['정규 교육과정 이수료 약 1,500 USD ~ 4,000 USD (약 2,070,000 KRW ~ 5,520,000 KRW)', 'CFP 연간 인증 갱신비 455 USD (약 628,000 KRW)']
-
-# ---------- F. Difficulty (Section 4.1) ----------
-difficulty:
-  pass_rate_score: 2
-  hours_score: 4
-  structure_points:
-    subjects_3_or_more: true
-    subjective_questions: false
-    stages_3_or_more: false
-    non_written_assessment: true
-  structure_score: 3
-  level: 3
-  rationale_ko: "합격률은 64% 수준이지만 의무 교육과정 이수, 6,000시간 실무경력과 학사 학위 요건이 결합된 중급(3단계) 자격입니다."
-
-# ---------- G. Sources and confidence ----------
-sources:
-  - url: "https://www.cfp.net"
-    accessed: "2026-11-11"
-    type: official
-    covers: ['eligibility', 'structure', 'hours', 'pass_rate', 'fee', 'award']
-confidence:
-  eligibility: high
-  award: high
-  structure: high
-  hours: high
-  pass_rate: high
-  fee: high
-as_of: "2026-11-11"
-unknown_reasons: []
-```
-
 ## gl_frm
 
 ```yaml
@@ -609,7 +597,7 @@ eligibility:
 award:
   extra_requirements: true
   work_years_min: 2
-  work_fields_accepted: ['risk_compliance', 'banking_finance', 'securities_asset_mgmt']
+  work_fields_accepted: ['banking_finance', 'securities_asset_mgmt']
   other_requirements_ko: ['Part II 합격 후 5년 이내 2년 이상의 풀타임 재무 리스크 관리 실무경력 증빙 제출']
   validity_ko: "실무경력 인증 완료 후 영구 유효 (자격 유지비 불요, GARP 회원 유지는 선택)."
 
@@ -707,6 +695,124 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+confidence:
+  eligibility: high
+  award: high
+  structure: high
+  hours: high
+  pass_rate: high
+  fee: high
+as_of: "2026-11-11"
+unknown_reasons: []
+```
+
+## us_cfp
+
+```yaml
+# ---------- A. Identity ----------
+id: us_cfp
+name_ko: "CFP(미국 공인재무설계사)"
+name_orig: "Certified Financial Planner (CFP Board / FPSB)"
+tier: 1
+region: US
+exam_type: certificate
+domain: ['financial_planning']
+issuer: "Certified Financial Planner Board of Standards (CFP Board)"
+official_url: "https://www.cfp.net"
+status: active
+summary_ko: "미국 및 전 세계에서 개인 종합자산관리 및 재무설계 분야의 최고 표준으로 인정받는 골드 스탠다드 자격입니다. 고객의 종합 재무상태 평가, 세무·상속·은퇴·보험·투자 솔루션 설계를 총체적으로 검증합니다."
+usage_ko: "미국 및 글로벌 금융기관의 자산관리(WM), Private Wealth Management(PWM), RIA(등록투자자문사) 취업 및 파트너 승진의 핵심 자격입니다."
+
+# ---------- B. Eligibility to sit the exam ----------
+eligibility:
+  nationality_rule: none
+  nationality_countries: []
+  paths:
+    - label_ko: "CFP Board 공인 교육과정 이수자 경로"
+      age_min: null
+      age_max: null
+      education_accepted: ['any']
+      work_years_min: 0
+      work_fields_accepted: ['any']
+      source_text: "Complete a CFP Board-registered education program, or hold an accepted credential (CPA, CFA, JD, etc.) to challenge."
+  extra_checks_ko: ['CFP Board 지정 정규 교육과정(7개 코스) 사전 수료 필수 (CPA, CFA, 변호사 등은 Challenge Status로 교육 면제)', '최종 인증을 위해 학사 학위 소지 필수 (시험 합격 후 5년 이내 소명 가능)']
+  exam_languages: ['en']
+  english_level_needed: working
+  english_level_reason: "Conducted in English covering extensive client financial planning scenarios and case analysis."
+  test_countries: ['US', 'CA']
+  retake_limit_ko: "평생 최대 5회 응시 가능 (5회 불합격 시 응시 자격 상실)."
+
+# ---------- C. Award of the credential after passing ----------
+award:
+  extra_requirements: true
+  work_years_min: 3
+  work_fields_accepted: ['banking_finance', 'securities_asset_mgmt', 'accounting_tax', 'corporate_finance']
+  other_requirements_ko: ['6,000시간(약 3년) 이상의 적격 재무설계 실무경력 또는 4,000시간 도제식(Apprenticeship) 경력 소명', '학사 학위 증명서 제출', 'CFP Board 직무윤리 및 배경조사 통과']
+  validity_ko: "2년마다 30시간의 계속교육(CE, 윤리 2시간 포함) 이수 및 인증 갱신."
+
+# ---------- D. Exam structure and study load ----------
+structure:
+  stages:
+    - name_ko: "단일 통합 필기시험"
+      subjects_ko: ['Professional Conduct and Regulation', 'General Financial Planning Principles', 'Risk Management and Insurance Planning', 'Investment Planning', 'Tax Planning', 'Retirement Savings and Income Planning', 'Estate Planning', 'Psychology of Financial Planning']
+      format: mcq
+      question_summary_ko: "객관식 4지선다형 총 170문항 (180분씩 2세션, 총 360분 CBT)"
+      duration_min: 360
+      passing_rule_ko: "준거집단 기준 변형 앵고프(Modified Angoff) 방식 합격 점수제 적용"
+      pass_rates:
+        - period: "2025"
+          rate_pct: 64.0
+          examinees: 9800
+        - period: "2024"
+          rate_pct: 63.5
+          examinees: 10200
+        - period: "2023"
+          rate_pct: 65.0
+          examinees: 9950
+      pass_rate_avg_pct: 64.17
+      hours_min: 350
+      hours_typical: 500
+      hours_max: 700
+      sessions_per_year: 3
+      next_dates_ko: "2026년 3월, 7월, 11월 연 3회 실시"
+      fee:
+        amount: 925
+        currency: USD
+        krw_approx: 1277000
+        fx_date: "2026-11-11"
+  exemptions_ko: "CPA, CFA, ChFC, CLU, 법학박사(JD) 소지자는 사전 교육 전과목 면제"
+  total:
+    hours_min: 350
+    hours_typical: 500
+    hours_max: 700
+    hours_basis: official
+    hours_basis_note_ko: "CFP Board 공식 가이드(정규 코스 250시간 + 시험 리뷰 250시간) 기준"
+    min_calendar_months: 9
+    pass_rate_avg_pct: 64.17
+
+# ---------- E. Other costs ----------
+cost:
+  other_fees_ko: ['정규 교육과정 이수료 약 1,500 USD ~ 4,000 USD (약 2,070,000 KRW ~ 5,520,000 KRW)', 'CFP 연간 인증 갱신비 455 USD (약 628,000 KRW)']
+
+# ---------- F. Difficulty (Section 4.1) ----------
+difficulty:
+  pass_rate_score: 2
+  hours_score: 4
+  structure_points:
+    subjects_3_or_more: true
+    subjective_questions: false
+    stages_3_or_more: false
+    non_written_assessment: true
+  structure_score: 3
+  level: 3
+  rationale_ko: "합격률은 64% 수준이지만 의무 교육과정 이수, 6,000시간 실무경력과 학사 학위 요건이 결합된 중급(3단계) 자격입니다."
+
+# ---------- G. Sources and confidence ----------
+sources:
+  - url: "https://www.cfp.net"
+    accessed: "2026-11-11"
+    type: official
+    covers: ['eligibility', 'structure', 'hours', 'pass_rate', 'fee', 'award']
 confidence:
   eligibility: high
   award: high

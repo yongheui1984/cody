@@ -53,15 +53,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 28.5
-          examinees: 2300
+          rate_pct: 24.84
+          examinees: 1449
         - period: "2024"
-          rate_pct: 27.2
-          examinees: 2450
+          rate_pct: 19.4
+          examinees: 1000
         - period: "2023"
-          rate_pct: 29.1
-          examinees: 2380
-      pass_rate_avg_pct: 28.27
+          rate_pct: 33.29
+          examinees: 760
+      pass_rate_avg_pct: 25.84
       hours_min: 300
       hours_typical: 450
       hours_max: 650
@@ -80,15 +80,15 @@ structure:
       passing_rule_ko: "과목별 60점 이상 득점 시 개별 과목 합격 (5년 내 5과목 모두 통과 시 최종 합격)"
       pass_rates:
         - period: "2025"
-          rate_pct: 23.4
-          examinees: 1580
+          rate_pct: 52.9
+          examinees: 120
         - period: "2024"
-          rate_pct: 21.8
-          examinees: 1690
+          rate_pct: 51.0
+          examinees: 126
         - period: "2023"
-          rate_pct: 22.5
-          examinees: 1620
-      pass_rate_avg_pct: 22.57
+          rate_pct: 50.1
+          examinees: 126
+      pass_rate_avg_pct: 51.33
       hours_min: 600
       hours_typical: 950
       hours_max: 1400
@@ -107,7 +107,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수학/통계 전공자 기준 2차 5과목 합격까지의 평균 수험 기간(2~3년, 약 1,400시간)"
     min_calendar_months: 14
-    pass_rate_avg_pct: 25.42
+    pass_rate_avg_pct: 38.59
 
 # ---------- E. Other costs ----------
 cost:
@@ -115,7 +115,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: 3
   hours_score: 5
   structure_points:
     subjects_3_or_more: true
@@ -200,17 +200,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 190문항 (모듈 1: 100문항 110분, 모듈 2: 90문항 100분)"
       duration_min: 210
       passing_rule_ko: "모듈별 40점 이상, 전 모듈 평균 70점 이상 득점 시 전체 합격 (한 모듈만 충족 시 부분합격)"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 33.8
-          examinees: 7200
-        - period: "2024"
-          rate_pct: 31.5
-          examinees: 7800
-        - period: "2023"
-          rate_pct: 32.7
-          examinees: 7500
-      pass_rate_avg_pct: 32.67
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 120
       hours_typical: 200
       hours_max: 300
@@ -229,7 +220,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "지정 교육 이수 및 시험 대비 집중 학습 평균 2개월(일 3시간) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 32.67
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -237,7 +228,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -246,7 +237,7 @@ difficulty:
     non_written_assessment: true
   structure_score: 3
   level: 3
-  rationale_ko: "의무 사전교육 수료 요건과 7개 재무설계 전 영역을 아우르는 70점 합격 컷오프를 지녀 평균 32%대의 변별력을 갖춘 중급 시험입니다."
+  rationale_ko: "7개 영역 객관식 시험과 의무 사전교육으로 총 200시간 내외의 학습량이 필요해 hours_score 3, structure_score 3을 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -254,10 +245,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee', 'award']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
@@ -267,10 +254,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국FPSB가 공식 합격률을 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_cfp
@@ -313,7 +302,7 @@ eligibility:
 award:
   extra_requirements: true
   work_years_min: 3
-  work_fields_accepted: ['banking_finance', 'securities_asset_mgmt', 'insurance', 'accounting_tax', 'financial_planning']
+  work_fields_accepted: ['banking_finance', 'securities_asset_mgmt', 'insurance', 'accounting_tax', 'corporate_finance']
   other_requirements_ko: ['3년 실무경력 증빙 소명', '한국FPSB 윤리 규정 준수 서약 및 인증']
   validity_ko: "2년마다 계속교육(CE) 30학점 이수 및 인증 갱신."
 
@@ -326,17 +315,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 265문항 (지식형 170문항 190분, 사례형 95문항 200분, 총 390분)"
       duration_min: 390
       passing_rule_ko: "지식형과 사례형 각각 100점 만점 기준 70점 이상 득점 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 23.4
-          examinees: 1820
-        - period: "2024"
-          rate_pct: 21.8
-          examinees: 1950
-        - period: "2023"
-          rate_pct: 24.2
-          examinees: 1880
-      pass_rate_avg_pct: 23.13
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 300
       hours_typical: 500
       hours_max: 750
@@ -355,7 +335,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "선행 AFPK 취득 후 CFP 정규 인강(200시간) 및 재무계산기 복합 사례 연습(4~6개월)"
     min_calendar_months: 5
-    pass_rate_avg_pct: 23.13
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -363,7 +343,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 4
   structure_points:
     subjects_3_or_more: true
@@ -372,7 +352,7 @@ difficulty:
     non_written_assessment: true
   structure_score: 4
   level: 4
-  rationale_ko: "AFPK 선행 취득과 200시간 정규 교육, 방대한 재무계산기 사례 문제 풀이와 3년 실무경력 인증 요건으로 인해 4단계(고급)로 분류됩니다."
+  rationale_ko: "이론형과 실무형 사례풀이 시험으로 총 500시간 내외의 학습량이 필요해 hours_score 4, structure_score 4를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 고급(4)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -380,10 +360,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee', 'award']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
@@ -393,10 +369,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국FPSB가 공식 합격률을 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_claims_adjuster
@@ -454,15 +432,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 32.1
-          examinees: 6800
+          rate_pct: 35.05
+          examinees: 6913
         - period: "2024"
-          rate_pct: 30.5
-          examinees: 7100
+          rate_pct: 31.68
+          examinees: 6022
         - period: "2023"
-          rate_pct: 31.0
-          examinees: 6950
-      pass_rate_avg_pct: 31.2
+          rate_pct: 32.78
+          examinees: 5238
+      pass_rate_avg_pct: 33.17
       hours_min: 180
       hours_typical: 280
       hours_max: 400
@@ -481,15 +459,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점 (상대평가 최소선발인원 적용)"
       pass_rates:
         - period: "2025"
-          rate_pct: 18.2
-          examinees: 2850
+          rate_pct: 13.2
+          examinees: 2621
         - period: "2024"
-          rate_pct: 17.1
-          examinees: 2980
+          rate_pct: 15.2
+          examinees: 2269
         - period: "2023"
-          rate_pct: 17.2
-          examinees: 2920
-      pass_rate_avg_pct: 17.5
+          rate_pct: 15.65
+          examinees: 2192
+      pass_rate_avg_pct: 14.68
       hours_min: 350
       hours_typical: 550
       hours_max: 800
@@ -508,7 +486,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "1차 및 2차 주관식 논술 수험생 평균 학습기간(1년~1년 6개월, 일 4시간) 집계"
     min_calendar_months: 10
-    pass_rate_avg_pct: 24.35
+    pass_rate_avg_pct: 23.93
 
 # ---------- E. Other costs ----------
 cost:
@@ -729,15 +707,15 @@ structure:
       passing_rule_ko: "매 과목 40% 이상, 총점 60% 이상 득점자 중 고득점자순 상대평가 선발"
       pass_rates:
         - period: "2025"
-          rate_pct: 18.4
-          examinees: 15800
+          rate_pct: 20.42
+          examinees: 14259
         - period: "2024"
-          rate_pct: 17.5
-          examinees: 16900
+          rate_pct: 20.88
+          examinees: 14472
         - period: "2023"
-          rate_pct: 19.1
-          examinees: 15300
-      pass_rate_avg_pct: 18.33
+          rate_pct: 19.11
+          examinees: 13733
+      pass_rate_avg_pct: 20.14
       hours_min: 1000
       hours_typical: 1500
       hours_max: 2000
@@ -756,15 +734,15 @@ structure:
       passing_rule_ko: "과목별 60% 이상 득점 시 합격 (절대평가 원칙, 미달 시 고득점순 최소선발예정인원 1,250명 선발)"
       pass_rates:
         - period: "2025"
-          rate_pct: 28.5
-          examinees: 4350
+          rate_pct: 27.86
+          examinees: 4308
         - period: "2024"
-          rate_pct: 27.8
-          examinees: 4500
+          rate_pct: 28.04
+          examinees: 4458
         - period: "2023"
-          rate_pct: 28.9
-          examinees: 4200
-      pass_rate_avg_pct: 28.4
+          rate_pct: 26.27
+          examinees: 4187
+      pass_rate_avg_pct: 27.39
       hours_min: 800
       hours_typical: 1300
       hours_max: 2000
@@ -783,7 +761,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "합격자 평균 전업 수험 기간(2.5년~3.5년, 일 8~10시간) 기준"
     min_calendar_months: 16
-    pass_rate_avg_pct: 23.37
+    pass_rate_avg_pct: 23.77
 
 # ---------- E. Other costs ----------
 cost:
@@ -878,15 +856,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 17.8
-          examinees: 17500
+          rate_pct: 18.09
+          examinees: 16856
         - period: "2024"
-          rate_pct: 16.2
-          examinees: 18200
+          rate_pct: 17.15
+          examinees: 18842
         - period: "2023"
-          rate_pct: 18.5
-          examinees: 16800
-      pass_rate_avg_pct: 17.5
+          rate_pct: 15.72
+          examinees: 13768
+      pass_rate_avg_pct: 16.99
       hours_min: 800
       hours_typical: 1200
       hours_max: 1600
@@ -905,15 +883,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점 (미달 시 최소선발인원 약 700명 순위 선발)"
       pass_rates:
         - period: "2025"
-          rate_pct: 12.8
-          examinees: 6500
+          rate_pct: 10.48
+          examinees: 6943
         - period: "2024"
-          rate_pct: 11.9
-          examinees: 6800
+          rate_pct: 13.15
+          examinees: 5437
         - period: "2023"
-          rate_pct: 13.2
-          examinees: 6400
-      pass_rate_avg_pct: 12.63
+          rate_pct: 11.36
+          examinees: 6317
+      pass_rate_avg_pct: 11.66
       hours_min: 900
       hours_typical: 1400
       hours_max: 2000
@@ -932,7 +910,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "전업 수험생 평균 수험기간(2~3년, 일 8시간) 기준"
     min_calendar_months: 16
-    pass_rate_avg_pct: 15.07
+    pass_rate_avg_pct: 14.33
 
 # ---------- E. Other costs ----------
 cost:
@@ -940,7 +918,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: 5
   hours_score: 5
   structure_points:
     subjects_3_or_more: true
@@ -948,7 +926,7 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: true
   structure_score: 4
-  level: 4
+  level: 5
   rationale_ko: "방대한 세법전과 조세 판례를 주관식으로 서술해야 하는 고난도 평가로 2차 합격률이 12%대에 불과하며 6개월 실무수습이 필수입니다."
 
 # ---------- G. Sources and confidence ----------
@@ -1025,17 +1003,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 120문항 (과목당 40문항, 150분 동시 진행)"
       duration_min: 150
       passing_rule_ko: "3과목 모두 과목별 100점 만점 기준 70점 이상 득점 시 합격 (한 과목이라도 70점 미만 시 불합격)"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 36.2
-          examinees: 38500
-        - period: "2024"
-          rate_pct: 34.8
-          examinees: 41200
-        - period: "2023"
-          rate_pct: 35.5
-          examinees: 39800
-      pass_rate_avg_pct: 35.5
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 140
       hours_typical: 240
       hours_max: 360
@@ -1054,7 +1023,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "비전공자 합격자 평균 수험기간(일 3시간, 2~3개월) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 35.5
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1062,7 +1031,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -1071,7 +1040,7 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 3
-  rationale_ko: "재무회계, 세무회계, 원가관리회계 3과목 모두 70점을 넘어야 하는 엄격한 절대평가 기준을 가지며, 합격률은 35% 내외인 중급 대표 자격입니다."
+  rationale_ko: "3개 과목 동시 70점 기준의 객관식 시험으로 총 240시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1079,10 +1048,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://fn.hackers.com"
     accessed: "2026-11-11"
     type: provider
@@ -1092,10 +1057,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "삼일회계법인이 공식 합격률을 게시하지 않아 보도 인용치는 사용하지 않음"
 ```
 
 ## kr_ins_solicitor
@@ -1151,17 +1118,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 50문항 (각 종목당 50분)"
       duration_min: 100
       passing_rule_ko: "100점 만점 기준 60점 이상 득점 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 72.5
-          examinees: 85000
-        - period: "2024"
-          rate_pct: 71.8
-          examinees: 89000
-        - period: "2023"
-          rate_pct: 73.2
-          examinees: 86500
-      pass_rate_avg_pct: 72.5
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 20
       hours_typical: 45
       hours_max: 70
@@ -1180,7 +1138,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "보험연수원 사이버 교육(30시간) 및 모의고사 풀이 1~2주 학습시간 집계"
     min_calendar_months: 1
-    pass_rate_avg_pct: 72.5
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1188,7 +1146,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 1
+  pass_rate_score: na
   hours_score: 1
   structure_points:
     subjects_3_or_more: true
@@ -1197,7 +1155,7 @@ difficulty:
     non_written_assessment: true
   structure_score: 3
   level: 2
-  rationale_ko: "합격률이 72%를 상회하고 준비 기간이 1개월 미만으로 매우 짧으나, 법정 의무 사전연수와 협회 등록 절차를 고려해 2단계(초급)로 분류됩니다."
+  rationale_ko: "단일 객관식 시험으로 총 45시간 내외의 학습량이 필요해 hours_score 1, structure_score 3을 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 초급(2)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1208,16 +1166,18 @@ sources:
   - url: "https://www.insure.or.kr"
     accessed: "2026-11-11"
     type: official
-    covers: ['award', 'pass_rate']
+    covers: ['award']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "양 협회가 공식 합격률 집계를 게시하지 않아 비공식 수치는 사용하지 않음"
 ```
 
 ## kr_bank_ncs
@@ -1273,17 +1233,8 @@ structure:
       question_summary_ko: "객관식 총 80~100문항 (총 90~120분)"
       duration_min: 100
       passing_rule_ko: "고득점순 채용 인원의 3~5배수 선발"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 18.0
-          examinees: 25000
-        - period: "2024"
-          rate_pct: 17.2
-          examinees: 27000
-        - period: "2023"
-          rate_pct: 17.5
-          examinees: 26000
-      pass_rate_avg_pct: 17.57
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 200
       hours_typical: 350
       hours_max: 500
@@ -1302,7 +1253,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "NCS 문제풀이 및 테셋(TESAT)/매경TEST 경제상식 학습 평균 3~4개월(일 3시간) 소요"
     min_calendar_months: 3
-    pass_rate_avg_pct: 17.57
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1310,7 +1261,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -1319,7 +1270,7 @@ difficulty:
     non_written_assessment: true
   structure_score: 3
   level: 3
-  rationale_ko: "객관식 평가이나 17%대의 치열한 선발 배수와 다단계 심층 면접이 수반되는 3단계(중급) 채용 관문입니다."
+  rationale_ko: "NCS 직업기초와 금융지식을 함께 묻는 채용 필기시험으로 총 350시간 내외의 학습량이 필요해 hours_score 3, structure_score 3을 받았다. 채용시험은 공식 합격률 개념이 없어 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1330,16 +1281,18 @@ sources:
   - url: "https://www.linkareer.com"
     accessed: "2026-11-11"
     type: statistics
-    covers: ['pass_rate', 'eligibility']
+    covers: ['eligibility']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "채용시험으로 공식 합격률 개념이 없어 합격률 점수를 제외함"
 ```
 
 ## kr_bok_g5
@@ -1395,17 +1348,8 @@ structure:
       question_summary_ko: "주관식 서술·계산형 전공학술 300점 (150분) + 일반논술 100점 (60분), 총 210분"
       duration_min: 210
       passing_rule_ko: "고득점순 채용예정인원의 약 1.5~2배수 필기 합격자 선발"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 8.5
-          examinees: 3200
-        - period: "2024"
-          rate_pct: 7.9
-          examinees: 3450
-        - period: "2023"
-          rate_pct: 8.2
-          examinees: 3300
-      pass_rate_avg_pct: 8.2
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 1000
       hours_typical: 1800
       hours_max: 2800
@@ -1424,7 +1368,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "행정고시 재경직 수준의 경제학/경영학 전업 수험 기간(1.5년~2년, 약 1,800시간) 반영"
     min_calendar_months: 12
-    pass_rate_avg_pct: 8.2
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1432,7 +1376,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 5
+  pass_rate_score: na
   hours_score: 5
   structure_points:
     subjects_3_or_more: true
@@ -1441,7 +1385,7 @@ difficulty:
     non_written_assessment: true
   structure_score: 4
   level: 5
-  rationale_ko: "필기시험 합격률이 8%대에 불과하고 행정고시급 학술 논술과 다단계 면접이 수반되는 5단계(최상급) 금융 채용 시험입니다."
+  rationale_ko: "석사 수준 전공 주관식과 논술을 포함한 채용 필기시험으로 총 1,800시간 내외의 학습량이 필요해 hours_score 5, structure_score 4를 받았다. 채용시험은 공식 합격률 개념이 없어 합격률 점수를 제외한 두 점수 평균으로 최상급(5)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1454,10 +1398,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "채용시험으로 공식 합격률 개념이 없어 합격률 점수를 제외함"
 ```
 
 ## kr_credit_mgr
@@ -1513,17 +1459,8 @@ structure:
       question_summary_ko: "객관식 5지선다형 총 100문항 (100분)"
       duration_min: 100
       passing_rule_ko: "과목별 40점 이상, 전 과목 평균 60점 이상 득점"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 36.8
-          examinees: 3100
-        - period: "2024"
-          rate_pct: 35.5
-          examinees: 3300
-        - period: "2023"
-          rate_pct: 37.0
-          examinees: 3250
-      pass_rate_avg_pct: 36.43
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 80
       hours_typical: 150
       hours_max: 220
@@ -1542,7 +1479,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "민사집행법 및 채권회수 실무 평균 2개월(일 2~3시간) 수험"
     min_calendar_months: 2
-    pass_rate_avg_pct: 36.43
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1550,7 +1487,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1559,7 +1496,7 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 2
-  rationale_ko: "민사집행법과 채무자회생법 등 법률 암기량이 있으나 객관식 60점 합격제에 합격률이 36% 수준인 2단계(초급~중급) 자격입니다."
+  rationale_ko: "객관식 필기시험으로 총 150시간 내외의 학습량이 필요해 hours_score 2, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 초급(2)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1567,19 +1504,17 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee', 'award']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "발급기관이 공식 합격률 통계를 게시하지 않아 제3자 집계치는 사용하지 않음"
 ```
 
 ## kr_customs_broker
@@ -1637,15 +1572,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 24.5
-          examinees: 3800
+          rate_pct: 15.43
+          examinees: 1412
         - period: "2024"
-          rate_pct: 23.8
-          examinees: 4100
+          rate_pct: 25.42
+          examinees: 1499
         - period: "2023"
-          rate_pct: 25.0
-          examinees: 3950
-      pass_rate_avg_pct: 24.43
+          rate_pct: 24.77
+          examinees: 1635
+      pass_rate_avg_pct: 21.87
       hours_min: 600
       hours_typical: 900
       hours_max: 1300
@@ -1664,15 +1599,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점 (미달 시 최소선발인원 약 90명 고득점순 선발)"
       pass_rates:
         - period: "2025"
-          rate_pct: 11.8
-          examinees: 850
+          rate_pct: 19.56
+          examinees: 460
         - period: "2024"
-          rate_pct: 10.9
-          examinees: 920
+          rate_pct: 14.83
+          examinees: 607
         - period: "2023"
-          rate_pct: 12.1
-          examinees: 880
-      pass_rate_avg_pct: 11.6
+          rate_pct: 13.87
+          examinees: 649
+      pass_rate_avg_pct: 16.09
       hours_min: 800
       hours_typical: 1300
       hours_max: 1900
@@ -1691,7 +1626,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "전업 수험생 평균 수험기간(2~3년, 일 8~10시간) 기준"
     min_calendar_months: 16
-    pass_rate_avg_pct: 18.02
+    pass_rate_avg_pct: 18.98
 
 # ---------- E. Other costs ----------
 cost:
@@ -1780,17 +1715,8 @@ structure:
       question_summary_ko: "전공 객관식 40문항 + NCS 40문항 (총 100분)"
       duration_min: 100
       passing_rule_ko: "고득점자순 선발예정인원의 약 10배수 선발"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 14.5
-          examinees: 4500
-        - period: "2024"
-          rate_pct: 13.8
-          examinees: 4800
-        - period: "2023"
-          rate_pct: 14.2
-          examinees: 4650
-      pass_rate_avg_pct: 14.17
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 400
       hours_typical: 700
       hours_max: 1000
@@ -1807,17 +1733,8 @@ structure:
       question_summary_ko: "전공 주관식 약술·논술 200점 (180분)"
       duration_min: 180
       passing_rule_ko: "고득점자순 선발예정인원의 약 2배수 선발"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 21.0
-          examinees: 650
-        - period: "2024"
-          rate_pct: 20.2
-          examinees: 700
-        - period: "2023"
-          rate_pct: 20.8
-          examinees: 680
-      pass_rate_avg_pct: 20.67
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 600
       hours_typical: 1000
       hours_max: 1500
@@ -1836,7 +1753,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "CPA 1차 합격자 또는 고시 수험생 기준 전공 및 NCS 집중 대비(1년~1.5년, 약 1,700시간)"
     min_calendar_months: 12
-    pass_rate_avg_pct: 17.42
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1844,7 +1761,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 5
   structure_points:
     subjects_3_or_more: true
@@ -1852,8 +1769,8 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: true
   structure_score: 4
-  level: 4
-  rationale_ko: "1차 객관식과 2차 심층 전공 논술을 연속 통과해야 하며 금융권 최고 수준의 경쟁률을 보이는 4단계(고급) 채용 시험입니다."
+  level: 5
+  rationale_ko: "1차 객관식과 2차 심층 전공 논술을 연속 통과해야 하며 총 1,700시간 내외의 학습량이 필요해 hours_score 5, structure_score 4를 받았다. 채용시험은 공식 합격률 개념이 없어 합격률 점수를 제외한 두 점수 평균으로 최상급(5)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1866,10 +1783,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "채용시험으로 공식 합격률 개념이 없어 합격률 점수를 제외함"
 ```
 
 ## kr_var_ins

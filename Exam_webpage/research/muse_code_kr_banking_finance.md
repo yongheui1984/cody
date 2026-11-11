@@ -51,20 +51,8 @@ structure:
       question_summary_ko: "객관식 5지선다형 총 200문항 (1부 100문항, 2부 100문항)"
       duration_min: 200
       passing_rule_ko: "각 부별 과목당 40점 이상, 각 부 평균 60점 이상 득점 시 합격 (한 부만 기준 충족 시 해당 부 부분합격)"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 30.34
-          examinees: 5420
-        - period: "2024"
-          rate_pct: 26.35
-          examinees: 5890
-        - period: "2023"
-          rate_pct: 31.14
-          examinees: 6120
-        - period: "2022"
-          rate_pct: 29.03
-          examinees: 5980
-      pass_rate_avg_pct: 29.22
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 100
       hours_typical: 180
       hours_max: 280
@@ -83,7 +71,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "주요 금융자격증 교육기관(와우패스, 이패스코리아) 수강생 평균 준비기간(일 2~3시간, 2~3개월) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 29.22
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -91,7 +79,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -100,7 +88,7 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 3
-  rationale_ko: "방대한 세무·부동산·금융상품 지식을 포괄하며 최근 4개년 평균 합격률이 29%대로 변별력이 높습니다. 다만 객관식 5지선다형 단일 차수 시험이므로 체계적인 학습 시 2~3개월 내 취득이 가능합니다."
+  rationale_ko: "5개 과목 객관식 필기시험으로 총 180시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -108,10 +96,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
@@ -121,10 +105,12 @@ confidence:
   award: high
   structure: high
   hours: medium
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융연수원이 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_cca
@@ -180,20 +166,8 @@ structure:
       question_summary_ko: "객관식 5지선다형 총 500점 만점 (1부 120분 200점, 2부 180분 300점)"
       duration_min: 300
       passing_rule_ko: "각 부별 과목 40점 이상, 1부 및 2부 각각 100점 만점 환산 시 평균 60점 이상 득점"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 29.35
-          examinees: 7820
-        - period: "2024"
-          rate_pct: 29.67
-          examinees: 8110
-        - period: "2023"
-          rate_pct: 25.03
-          examinees: 7950
-        - period: "2022"
-          rate_pct: 26.78
-          examinees: 7640
-      pass_rate_avg_pct: 27.71
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 160
       hours_typical: 280
       hours_max: 420
@@ -212,7 +186,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "회계 비전공자 기준 금융단기·이패스코리아 권장 학습시간(일 3시간, 약 3개월)"
     min_calendar_months: 2
-    pass_rate_avg_pct: 27.71
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -220,7 +194,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -229,7 +203,7 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 3
-  rationale_ko: "중급회계와 연결회계 및 실제 신용평가 재무제표 종합사례를 5시간 동안 분석하는 방대한 분량으로 최근 평균 합격률이 27%대에 머뭅니다. 다만 객관식 평가이므로 회계 베이스를 구축하면 단일 회차 전과목 합격이 가능합니다."
+  rationale_ko: "회계학 2과목과 신용분석으로 구성된 객관식 시험으로 총 280시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -237,10 +211,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://www.wowpass.com"
     accessed: "2026-11-11"
     type: provider
@@ -250,10 +220,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융연수원이 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_cfes_1
@@ -309,17 +281,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 80문항 (100점 만점)"
       duration_min: 100
       passing_rule_ko: "과목별 40점 이상, 전 과목 평균 60점 이상 득점"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 33.47
-          examinees: 8873
-        - period: "2024"
-          rate_pct: 27.72
-          examinees: 8540
-        - period: "2023"
-          rate_pct: 26.02
-          examinees: 8210
-      pass_rate_avg_pct: 29.07
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 80
       hours_typical: 140
       hours_max: 220
@@ -338,7 +301,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융 교육기관(해커스금융, 와우패스) 비전공자 합격 수기 평균 학습기간(일 2~3시간, 6~8주) 집계"
     min_calendar_months: 2
-    pass_rate_avg_pct: 29.07
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -346,7 +309,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -354,8 +317,8 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: false
   structure_score: 2
-  level: 3
-  rationale_ko: "외국환거래법령의 암기 분량과 지문 길이가 까다로워 평균 합격률이 29% 수준에 머뭅니다. 하지만 100문항 미만의 4지선다형 시험으로 단기 집중 시 공략이 수월합니다."
+  level: 2
+  rationale_ko: "외환법령 중심 객관식 단일 시험으로 총 140시간 내외의 학습량이 필요해 hours_score 2, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 초급(2)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -363,10 +326,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://fn.hackers.com"
     accessed: "2026-11-11"
     type: provider
@@ -376,10 +335,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융연수원이 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_cfes_2
@@ -435,17 +396,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 80문항 (100점 만점)"
       duration_min: 100
       passing_rule_ko: "과목별 40점 이상, 전 과목 평균 60점 이상 득점"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 22.62
-          examinees: 5331
-        - period: "2024"
-          rate_pct: 27.72
-          examinees: 5620
-        - period: "2023"
-          rate_pct: 26.02
-          examinees: 5480
-      pass_rate_avg_pct: 25.45
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 100
       hours_typical: 160
       hours_max: 260
@@ -464,7 +416,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "영어 신용장통일규칙 독해 학습을 감안한 주요 수험 교육기관 권장시간"
     min_calendar_months: 2
-    pass_rate_avg_pct: 25.45
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -472,7 +424,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -481,7 +433,7 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 3
-  rationale_ko: "국제 통일규칙 원문 독해와 복잡한 기업 무역금융 구조를 다루므로 최근 평균 합격률이 25%대로 1종보다 낮고 난도가 높습니다."
+  rationale_ko: "기업외환 3개 영역 객관식 단일 시험으로 총 160시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -489,10 +441,6 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
@@ -502,10 +450,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융연수원이 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_cim
@@ -520,7 +470,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=10"
 status: active
 summary_ko: "집합투자재산(펀드), 신탁재산 또는 투자일임재산을 운용하는 펀드매니저가 되기 위해 취득해야 하는 금융투자협회 주관 법정 전문면허 시험입니다. 주식, 채권, 파생상품, 대안투자, 포트폴리오 관리 기법 및 관련 세제와 직무윤리를 포괄적으로 검증합니다."
 usage_ko: "자산운용사 펀드매니저, 증권사 Wrap Account(랩어카운트) 운용역, 신탁 운용역의 법정 필수 자격이며 시중은행 및 증권사 공채에서 가장 인정받는 핵심 자격증입니다."
@@ -561,20 +511,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "응시 과목별 40% 이상, 전 과목 총점 70% 이상(70문항 이상 정답) 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 35.8
-          examinees: 24500
-        - period: "2024"
-          rate_pct: 34.2
-          examinees: 26100
-        - period: "2023"
-          rate_pct: 36.5
-          examinees: 25300
-        - period: "2022"
-          rate_pct: 33.9
-          examinees: 23800
-      pass_rate_avg_pct: 35.1
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 140
       hours_typical: 240
       hours_max: 350
@@ -593,7 +531,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수험 교육기관(해커스, 토마토패스, 이패스) 비전공자 합격자 평균 2~3개월(일 3시간) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 35.1
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -601,7 +539,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -610,18 +548,18 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 3
-  rationale_ko: "펀드매니저 법정 자격으로 금융공학, 대안투자, 포트폴리오 관리 등 폭넓은 실무 지식을 70점 이상 득점해야 하므로 중급 수준의 대표적인 금융자격증입니다."
+  rationale_ko: "3개 과목 객관식 필기시험으로 총 240시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=10"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
   - url: "https://fn.hackers.com"
     accessed: "2026-11-11"
     type: provider
@@ -631,10 +569,12 @@ confidence:
   award: high
   structure: high
   hours: high
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_cra
@@ -690,20 +630,8 @@ structure:
       question_summary_ko: "객관식 5지선다형 총 270분 (1부 120분, 2부 150분)"
       duration_min: 270
       passing_rule_ko: "각 부별 과목 40점 이상, 전 과목 평균 60점 이상 득점"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 43.06
-          examinees: 216
-        - period: "2024"
-          rate_pct: 61.58
-          examinees: 242
-        - period: "2023"
-          rate_pct: 46.2
-          examinees: 238
-        - period: "2022"
-          rate_pct: 47.01
-          examinees: 251
-      pass_rate_avg_pct: 49.46
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 150
       hours_typical: 250
       hours_max: 380
@@ -722,7 +650,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "선행 신용분석사 보유자 기준 전문 연수 및 시험 대비 집중 학습시간 추산"
     min_calendar_months: 3
-    pass_rate_avg_pct: 49.46
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -730,7 +658,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: false
@@ -739,7 +667,7 @@ difficulty:
     non_written_assessment: true
   structure_score: 2
   level: 3
-  rationale_ko: "응시자 전원이 이미 신용분석사를 취득하고 집합교육을 마친 실무 전문가 풀이어서 합격률은 49% 수준이나, 선행 자격과 법률 심사 난도가 매우 까다롭습니다."
+  rationale_ko: "주관식 종합사례를 포함한 여신심사 필기시험으로 총 250시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -747,19 +675,17 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
-    accessed: "2026-11-11"
-    type: statistics
-    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: medium
-  pass_rate: high
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융연수원이 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_deriv_advisor
@@ -774,7 +700,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=07"
 status: active
 summary_ko: "금융회사 임직원으로서 일반투자자에게 장내·장외 파생상품 및 ELS, DLS 등 파생결합증권에 대한 투자 권유 및 전문 자문을 수행할 수 있는 법정 전문자격입니다."
 usage_ko: "증권사 및 선물회사 선물·옵션 창구, 파생결합증권(ELS/DLS) 판매 창구 및 파생상품 데스크 배치의 필수 자격입니다."
@@ -815,17 +741,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "과목별 40% 이상, 전 과목 70% 이상(70문항) 정답 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 32.5
-          examinees: 9200
-        - period: "2024"
-          rate_pct: 31.0
-          examinees: 9650
-        - period: "2023"
-          rate_pct: 33.8
-          examinees: 9400
-      pass_rate_avg_pct: 32.43
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 90
       hours_typical: 160
       hours_max: 240
@@ -844,7 +761,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "파생상품 손익구조 및 수리 계산 특성상 평균 2개월(일 2~3시간) 소요"
     min_calendar_months: 2
-    pass_rate_avg_pct: 32.43
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -852,7 +769,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -861,27 +778,29 @@ difficulty:
     non_written_assessment: true
   structure_score: 3
   level: 3
-  rationale_ko: "자문인력 3종 중 파생상품의 수리적 개념과 옵션 합성 전략이 가장 복잡하여 합격률이 32% 수준으로 가장 낮습니다."
+  rationale_ko: "4개 과목 객관식 시험과 사전 투자자보호교육으로 총 160시간 내외의 학습량이 필요해 hours_score 3, structure_score 3을 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=07"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_fin_analyst
@@ -938,16 +857,7 @@ structure:
       duration_min: 120
       passing_rule_ko: "응시 과목별 40% 이상, 전 과목 총점 70% 이상(70문항 이상 정답) 시 합격"
       pass_rates:
-        - period: "2025"
-          rate_pct: 28.5
-          examinees: 3120
-        - period: "2024"
-          rate_pct: 26.8
-          examinees: 3350
-        - period: "2023"
-          rate_pct: 27.4
-          examinees: 3210
-      pass_rate_avg_pct: 27.57
+      pass_rate_avg_pct: unknown
       hours_min: 150
       hours_typical: 260
       hours_max: 380
@@ -966,7 +876,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "통계학, 주식·채권 밸류에이션 계산 문제 비중을 감안한 수험기관 권장 학습시간"
     min_calendar_months: 3
-    pass_rate_avg_pct: 27.57
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -974,7 +884,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -1003,7 +913,10 @@ confidence:
   pass_rate: medium
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 금융투자분석사의 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
+notes_ko: "금융투자협회에서 금융투자분석사의 공식 합격률 통계를 별도로 대외 공표하지 않아 Section 4.1 규정에 따라 합격률 기준을 제외하고 학습시간과 구조점수 평균(2.5 -> 3등급)으로 산출함."
 ```
 
 ## kr_frm
@@ -1018,7 +931,7 @@ region: KR
 exam_type: certificate
 domain: ['risk_compliance', 'securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=09"
 status: active
 summary_ko: "금융기관의 시장 리스크, 신용 리스크, 운영 리스크를 측정하고 VaR(Value at Risk) 모델링 및 장외파생상품 리스크를 통제·관리하는 국내 최고 난이도의 리스크 전문자격입니다."
 usage_ko: "은행 및 증권사의 리스크관리부서, 파생상품 트레이딩 데스크, 금융공학 연구팀 취업 시 최고의 전문성 입증 지표로 통용됩니다."
@@ -1059,17 +972,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "과목별 40% 이상, 전 과목 총점 70% 이상(70문항 이상 정답) 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 22.4
-          examinees: 2150
-        - period: "2024"
-          rate_pct: 21.0
-          examinees: 2380
-        - period: "2023"
-          rate_pct: 23.5
-          examinees: 2290
-      pass_rate_avg_pct: 22.3
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 180
       hours_typical: 300
       hours_max: 450
@@ -1088,7 +992,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융통계학과 장외파생 수리 계산 학습을 고려한 수험기관 평균 수험시간(일 3시간, 3~4개월)"
     min_calendar_months: 3
-    pass_rate_avg_pct: 22.3
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1096,7 +1000,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -1105,27 +1009,29 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 3
-  rationale_ko: "금융투자협회 주관 시험 중 수리적 난도가 가장 높아 평균 합격률이 22%대로 매우 낮습니다. 객관식이지만 계산 집약적 문항이 주를 이룹니다."
+  rationale_ko: "4개 과목 객관식 필기시험으로 총 300시간 내외의 학습량이 필요해 hours_score 3, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=09"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_fund_advisor
@@ -1140,7 +1046,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=05"
 status: active
 summary_ko: "자본시장법에 따라 금융회사 소속 임직원으로서 일반투자자에게 펀드(집합투자증권)의 매매를 전문적으로 권유하거나 투자 자문을 수행할 수 있는 법정 전문인력 자격입니다."
 usage_ko: "은행 및 증권회사 영업점 창구에서 일반 고객을 대상으로 공모/사모 펀드 상품을 상담·판매하기 위한 법정 필수 자격입니다."
@@ -1181,17 +1087,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "과목별 40% 이상, 전 과목 70% 이상(70문항) 정답 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 41.2
-          examinees: 14500
-        - period: "2024"
-          rate_pct: 39.8
-          examinees: 15200
-        - period: "2023"
-          rate_pct: 42.5
-          examinees: 14800
-      pass_rate_avg_pct: 41.17
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 60
       hours_typical: 110
       hours_max: 160
@@ -1210,7 +1107,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융기관 재직자 평균 수험 기간(일 2시간, 약 5~6주) 집계"
     min_calendar_months: 2
-    pass_rate_avg_pct: 41.17
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1218,7 +1115,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1227,27 +1124,29 @@ difficulty:
     non_written_assessment: true
   structure_score: 3
   level: 3
-  rationale_ko: "합격 기준이 70점으로 대행인(60점)보다 높고 금융기관 재직 요건 및 사전 의무교육이 수반되어 중급 수준의 관리가 요구됩니다."
+  rationale_ko: "3개 과목 객관식 시험과 사전 투자자보호교육으로 총 110시간 내외의 학습량이 필요해 hours_score 2, structure_score 3을 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=05"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_fund_solicitor
@@ -1262,7 +1161,7 @@ region: KR
 exam_type: certificate
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=02"
 status: active
 summary_ko: "금융투자회사와의 위탁계약을 통해 투자자에게 펀드(집합투자증권)의 매매를 권유하거나 계약 체결을 중개하는 대행인 자격입니다. 펀드 법규, 투자자보호 기준 및 상품 기초 지식을 검정합니다."
 usage_ko: "금융권 취업 준비생의 기초 입문 자격증이자 보험설계사 및 독립재무상담사(IFA)의 펀드 판매 위탁 대행 자격으로 활용됩니다."
@@ -1303,17 +1202,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "응시 과목별 40% 이상, 전체 60% 이상 정답 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 58.4
-          examinees: 11200
-        - period: "2024"
-          rate_pct: 55.2
-          examinees: 11850
-        - period: "2023"
-          rate_pct: 56.8
-          examinees: 10920
-      pass_rate_avg_pct: 56.8
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 40
       hours_typical: 80
       hours_max: 120
@@ -1332,7 +1222,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융자격증 학원 수강생 기준 평균 3~4주(일 2시간) 준비기간 집계"
     min_calendar_months: 1
-    pass_rate_avg_pct: 56.8
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1340,7 +1230,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1349,27 +1239,29 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 2
-  rationale_ko: "과목 수가 3개로 구성되어 있으나 문항 난이도가 평이하고 평균 합격률이 56%를 상회하여 입문자가 1개월 내 취득하기 적합한 초급 시험입니다."
+  rationale_ko: "3개 과목 객관식 시험으로 총 80시간 내외의 학습량이 필요해 hours_score 2, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 초급(2)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=02"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_sec_advisor
@@ -1384,7 +1276,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=06"
 status: active
 summary_ko: "금융회사 임직원으로서 일반투자자를 상대로 주식, 채권 등 증권에 대한 투자 권유 및 자문을 전담할 수 있는 법정 전문자격입니다."
 usage_ko: "증권사 및 은행 영업점에서 주식 매매 브로커리지, 채권 판매, 신탁 상품 상담을 수행하기 위한 필수 자격입니다."
@@ -1425,17 +1317,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "과목별 40% 이상, 전 과목 70% 이상(70문항) 정답 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 38.6
-          examinees: 13800
-        - period: "2024"
-          rate_pct: 37.2
-          examinees: 14100
-        - period: "2023"
-          rate_pct: 39.4
-          examinees: 13950
-      pass_rate_avg_pct: 38.4
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 70
       hours_typical: 130
       hours_max: 180
@@ -1454,7 +1337,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융사 신입사원 입문 교육 및 합격자 평균 6~8주(일 2~3시간) 학습시간"
     min_calendar_months: 2
-    pass_rate_avg_pct: 38.4
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1462,7 +1345,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1471,27 +1354,29 @@ difficulty:
     non_written_assessment: true
   structure_score: 3
   level: 3
-  rationale_ko: "증권분석과 자본시장법규의 70점 합격 컷오프와 사전 의무교육이 요구되며, 평균 합격률은 38% 수준을 보입니다."
+  rationale_ko: "3개 과목 객관식 시험과 사전 투자자보호교육으로 총 130시간 내외의 학습량이 필요해 hours_score 2, structure_score 3을 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 중급(3)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=06"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_sec_solicitor
@@ -1506,7 +1391,7 @@ region: KR
 exam_type: certificate
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=01"
 status: active
 summary_ko: "금융투자회사와 계약을 맺고 투자자에게 주식, 채권 등 증권의 매매 및 투자신탁 수익증권 매매를 권유하는 위탁 대행인 자격입니다. 자본시장법규와 주식·채권 매매 실무를 평가합니다."
 usage_ko: "증권사 및 금융회사 취업 입문 자격증, 보험설계사 및 투자상담 대행 인력의 필수 등록 자격으로 쓰입니다."
@@ -1547,17 +1432,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "응시 과목별 40% 이상, 전체 60% 이상 정답 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 54.1
-          examinees: 9800
-        - period: "2024"
-          rate_pct: 52.3
-          examinees: 10400
-        - period: "2023"
-          rate_pct: 53.6
-          examinees: 9950
-      pass_rate_avg_pct: 53.33
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 50
       hours_typical: 90
       hours_max: 140
@@ -1576,7 +1452,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수험생 평균 1개월 내외(일 2~3시간) 준비기간 집계"
     min_calendar_months: 1
-    pass_rate_avg_pct: 53.33
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1584,7 +1460,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1593,27 +1469,29 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 2
-  rationale_ko: "증권시장의 기초 제도와 영업실무를 다루며 50%가 넘는 합격률을 보여 초급 난이도에 해당합니다."
+  rationale_ko: "3개 과목 객관식 시험으로 총 90시간 내외의 학습량이 필요해 hours_score 2, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 초급(2)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=01"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 
 ## kr_deriv_solicitor
@@ -1669,17 +1547,8 @@ structure:
       question_summary_ko: "객관식 4지선다형 총 100문항 (120분)"
       duration_min: 120
       passing_rule_ko: "과목별 40% 이상, 전 과목 60% 이상 득점 시 합격"
-      pass_rates:
-        - period: "2025"
-          rate_pct: 42.0
-          examinees: 5200
-        - period: "2024"
-          rate_pct: 41.2
-          examinees: 5500
-        - period: "2023"
-          rate_pct: 41.5
-          examinees: 5300
-      pass_rate_avg_pct: 41.57
+      pass_rates: unknown
+      pass_rate_avg_pct: unknown
       hours_min: 60
       hours_typical: 110
       hours_max: 160
@@ -1698,7 +1567,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수험기관 기준 평균 1~1.5개월(일 2~3시간) 소요"
     min_calendar_months: 2
-    pass_rate_avg_pct: 41.57
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1706,7 +1575,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1715,7 +1584,7 @@ difficulty:
     non_written_assessment: false
   structure_score: 2
   level: 2
-  rationale_ko: "파생상품의 기본 개념을 다루지만 60점 합격 기준과 41%대의 합격률을 보여 초급 난이도(2단계)에 해당합니다."
+  rationale_ko: "객관식 필기시험으로 총 110시간 내외의 학습량이 필요해 hours_score 2, structure_score 2를 받았다. 공식 합격률이 공개되지 않아 합격률 점수를 제외한 두 점수 평균으로 초급(2)으로 산정하였다."
 
 # ---------- G. Sources and confidence ----------
 sources:
@@ -1726,15 +1595,17 @@ sources:
   - url: "https://www.epasskorea.com"
     accessed: "2026-11-11"
     type: provider
-    covers: ['hours', 'pass_rate']
+    covers: ['hours']
 confidence:
   eligibility: high
   award: high
   structure: high
   hours: high
-  pass_rate: medium
+  pass_rate: low
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons:
+    - field: pass_rates
+      reason_ko: "한국금융투자협회가 공식 합격률 통계를 게시하지 않아 비공식 집계치는 사용하지 않음"
 ```
 

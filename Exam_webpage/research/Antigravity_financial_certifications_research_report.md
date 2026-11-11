@@ -151,28 +151,28 @@ The table below synthesizes all 46 evaluated qualifications, cross-referencing r
 
 | ID | Qualification Name (KO) | Original / English Title | Tier | Reg | Primary Domain | Est. Fee (KRW) | Typical Hours | Pass Rate (%) | Diff Level |
 |---|---|---|:---:|:---:|---|---:|---:|---:|:---:|
-| `kr_actuary` | 보험계리사 | Certified Actuary | 1 | KR | insurance, risk_compliance | 30,000 | 1,400 | 25.4% | 4 (고급) |
-| `kr_afpk` | AFPK(재무설계사) | Associate Financial Planner Korea (AFPK) | 1 | KR | financial_planning | 66,000 | 200 | 32.7% | 3 (중급) |
+| `kr_actuary` | 보험계리사 | Certified Actuary | 1 | KR | insurance, risk_compliance | 30,000 | 1,400 | 38.6% | 4 (고급) |
+| `kr_afpk` | AFPK(재무설계사) | Associate Financial Planner Korea (AFPK) | 1 | KR | financial_planning | 66,000 | 200 | 32.6% | 3 (중급) |
 | `kr_bank_fp` | 자산관리사(은행FP) | Bank Financial Planner (FP) | 1 | KR | banking_credit_fx, financial_planning | 55,000 | 180 | 29.2% | 3 (중급) |
 | `kr_cca` | 신용분석사 | Certified Credit Analyst (CCA) | 1 | KR | banking_credit_fx, accounting_tax | 66,000 | 280 | 27.7% | 3 (중급) |
 | `kr_cfes_1` | 외환전문역 1종 | Certified Foreign Exchange Specialist I (CFES I) | 1 | KR | banking_credit_fx | 55,000 | 140 | 29.1% | 3 (중급) |
 | `kr_cfes_2` | 외환전문역 2종 | Certified Foreign Exchange Specialist II (CFES II) | 1 | KR | banking_credit_fx | 55,000 | 160 | 25.4% | 3 (중급) |
-| `kr_cfp` | CFP(국제공인재무설계사 - 한국) | Certified Financial Planner Korea (CFP Korea) | 1 | KR | financial_planning | 220,000 | 500 | 23.1% | 4 (고급) |
-| `kr_cim` | 투자자산운용사 | Certified Investment Manager (CIM) | 1 | KR | securities_investment | 50,000 | 240 | 35.1% | 3 (중급) |
-| `kr_claims_adjuster` | 손해사정사 | Certified Damage Adjuster | 1 | KR | insurance | 30,000 | 830 | 24.4% | 4 (고급) |
+| `kr_cfp` | CFP(국제공인재무설계사 - 한국) | Certified Financial Planner Korea (CFP Korea) | 1 | KR | financial_planning | 220,000 | 500 | 33.3% | 4 (고급) |
+| `kr_cim` | 투자자산운용사 | Certified Investment Manager (CIM) | 1 | KR | securities_investment | 50,000 | 240 | 37.5% | 3 (중급) |
+| `kr_claims_adjuster` | 손해사정사 | Certified Damage Adjuster | 1 | KR | insurance | 30,000 | 830 | 23.9% | 4 (고급) |
 | `kr_comp_acct_tax` | 전산세무회계(전산회계 1·2급 / 전산세무 1·2급) | Computerized Accounting and Tax (KACPTA) | 1 | KR | accounting_tax | 30,000 | 140 | 34.3% | 3 (중급) |
-| `kr_cpa` | 공인회계사(KICPA) | Korean Certified Public Accountant (KICPA) | 1 | KR | accounting_tax | 50,000 | 2,800 | 23.4% | 4 (고급) |
+| `kr_cpa` | 공인회계사(KICPA) | Korean Certified Public Accountant (KICPA) | 1 | KR | accounting_tax | 50,000 | 2,800 | 23.8% | 4 (고급) |
 | `kr_cra` | 여신심사역 | Certified Credit Reviewer (CRA) | 1 | KR | banking_credit_fx | 66,000 | 250 | 49.5% | 3 (중급) |
-| `kr_cta` | 세무사(CTA) | Certified Tax Accountant (CTA) | 1 | KR | accounting_tax | 30,000 | 2,600 | 15.1% | 4 (고급) |
-| `kr_deriv_advisor` | 파생상품투자권유자문인력 | Certified Derivatives Investment Advisor | 1 | KR | securities_investment | 40,000 | 160 | 32.4% | 3 (중급) |
-| `kr_fin_acct_mgr` | 재경관리사 | Certified Financial & Accounting Manager | 1 | KR | accounting_tax | 70,000 | 240 | 35.5% | 3 (중급) |
-| `kr_fin_analyst` | 금융투자분석사 | Certified Financial Analyst (Research Analyst) | 1 | KR | securities_investment | 40,000 | 260 | 27.6% | 3 (중급) |
-| `kr_frm` | 재무위험관리사 | Certified Financial Risk Manager (Korea FRM) | 1 | KR | risk_compliance, securities_investment | 40,000 | 300 | 22.3% | 3 (중급) |
-| `kr_fund_advisor` | 펀드투자권유자문인력 | Certified Fund Investment Advisor | 1 | KR | securities_investment | 40,000 | 110 | 41.2% | 3 (중급) |
-| `kr_fund_solicitor` | 펀드투자권유대행인 | Certified Fund Investment Solicitor | 1 | KR | securities_investment | 40,000 | 80 | 56.8% | 2 (초급) |
+| `kr_cta` | 세무사(CTA) | Certified Tax Accountant (CTA) | 1 | KR | accounting_tax | 30,000 | 2,600 | 14.3% | 5 (최상급) |
+| `kr_deriv_advisor` | 파생상품투자권유자문인력 | Certified Derivatives Investment Advisor | 1 | KR | securities_investment | 40,000 | 160 | 34.8% | 3 (중급) |
+| `kr_fin_acct_mgr` | 재경관리사 | Certified Financial & Accounting Manager | 1 | KR | accounting_tax | 70,000 | 240 | 26.7% | 3 (중급) |
+| `kr_fin_analyst` | 금융투자분석사 | Certified Financial Analyst (Research Analyst) | 1 | KR | securities_investment | 40,000 | 260 | unknown | 3 (중급) |
+| `kr_frm` | 재무위험관리사 | Certified Financial Risk Manager (Korea FRM) | 1 | KR | risk_compliance, securities_investment | 40,000 | 300 | 35.4% | 3 (중급) |
+| `kr_fund_advisor` | 펀드투자권유자문인력 | Certified Fund Investment Advisor | 1 | KR | securities_investment | 40,000 | 110 | 37.2% | 3 (중급) |
+| `kr_fund_solicitor` | 펀드투자권유대행인 | Certified Fund Investment Solicitor | 1 | KR | securities_investment | 40,000 | 80 | 42.2% | 2 (초급) |
 | `kr_ins_solicitor` | 보험설계사(생명보험·손해보험·제3보험) | Insurance Solicitor (Life, Non-Life & Third-Sector) | 1 | KR | insurance | 40,000 | 45 | 72.5% | 2 (초급) |
-| `kr_sec_advisor` | 증권투자권유자문인력 | Certified Securities Investment Advisor | 1 | KR | securities_investment | 40,000 | 130 | 38.4% | 3 (중급) |
-| `kr_sec_solicitor` | 증권투자권유대행인 | Certified Securities Investment Solicitor | 1 | KR | securities_investment | 40,000 | 90 | 53.3% | 2 (초급) |
+| `kr_sec_advisor` | 증권투자권유자문인력 | Certified Securities Investment Advisor | 1 | KR | securities_investment | 40,000 | 130 | 39.2% | 3 (중급) |
+| `kr_sec_solicitor` | 증권투자권유대행인 | Certified Securities Investment Solicitor | 1 | KR | securities_investment | 40,000 | 90 | 36.5% | 2 (초급) |
 | `gb_cisi_imc` | CISI IMC(영국투자운용자격) | Investment Management Certificate (IMC) | 1 | GB | securities_investment | 560,000 | 210 | 67.5% | 2 (초급) |
 | `gb_icaew_aca` | ICAEW ACA(잉글랜드·웨일스 공인회계사) | ICAEW ACA Qualification | 1 | GB | accounting_tax | 3,150,000 | 1,500 | 74.2% | 4 (고급) |
 | `gl_acca` | ACCA(영국공인회계사) | ACCA Qualification | 1 | GLOBAL | accounting_tax | 630,000 | 1,900 | 52.4% | 4 (고급) |
@@ -185,18 +185,18 @@ The table below synthesizes all 46 evaluated qualifications, cross-referencing r
 | `gl_frm` | FRM(국제재무위험관리사) | Financial Risk Manager (FRM) | 1 | GLOBAL | risk_compliance | 828,000 | 540 | 51.6% | 3 (중급) |
 | `us_cma` | 미국관리회계사(US CMA) | Certified Management Accountant (IMA) | 1 | US | accounting_tax | 683,000 | 340 | 47.8% | 3 (중급) |
 | `us_cpa` | 미국공인회계사(US CPA) | Uniform CPA Examination (AICPA / NASBA) | 1 | US | accounting_tax | 1,932,000 | 500 | 51.2% | 3 (중급) |
-| `us_finra_series63` | FINRA Series 63(미국 주정부 증권법) | Uniform Securities Agent State Law Examination (Series 63) | 1 | US | securities_investment, risk_compliance | 203,000 | 40 | 80.5% | 1 (입문) |
-| `us_finra_series65` | FINRA Series 65(미국 투자자문관리사) | Uniform Investment Adviser Law Examination (Series 65) | 1 | US | securities_investment, financial_planning | 258,000 | 100 | 67.4% | 2 (초급) |
+| `us_finra_series63` | FINRA Series 63(미국 주정부 증권법) | Uniform Securities Agent State Law Examination (Series 63) | 1 | US | securities_investment, risk_compliance | 203,000 | 40 | unknown | 2 (초급) |
+| `us_finra_series65` | FINRA Series 65(미국 투자자문관리사) | Uniform Investment Adviser Law Examination (Series 65) | 1 | US | securities_investment, financial_planning | 258,000 | 100 | unknown | 2 (초급) |
 | `us_finra_series7` | FINRA Series 7(미국 일반증권관리인) | General Securities Representative Exam (Series 7) | 1 | US | securities_investment | 338,000 | 130 | 70.0% | 2 (초급) |
 | `us_finra_sie` | FINRA SIE(미국 증권업 기초자격) | Securities Industry Essentials (SIE) Examination | 1 | US | securities_investment | 138,000 | 70 | 74.3% | 2 (초급) |
 | `kr_bank_ncs` | 주요 시중은행 신입행원 필기시험(NCS·금융상식) | Korean Commercial Banks Joint Recruitment Written Exam | 2 | KR | banking_credit_fx, financial_planning | 0 | 350 | 17.6% | 3 (중급) |
 | `kr_bok_g5` | 한국은행 종합기획직원(G5) 채용 필기시험 | Bank of Korea Junior Economist Examination (G5) | 2 | KR | banking_credit_fx, securities_investment | 0 | 1,800 | 8.2% | 5 (최상급) |
-| `kr_credit_mgr` | 신용관리사 | Certified Credit Manager | 2 | KR | banking_credit_fx | 55,000 | 150 | 36.4% | 2 (초급) |
-| `kr_customs_broker` | 관세사 | Licensed Customs Broker | 2 | KR | banking_credit_fx, accounting_tax | 20,000 | 2,200 | 18.0% | 4 (고급) |
+| `kr_credit_mgr` | 신용관리사 | Certified Credit Manager | 2 | KR | banking_credit_fx | 55,000 | 150 | 59.4% | 2 (초급) |
+| `kr_customs_broker` | 관세사 | Licensed Customs Broker | 2 | KR | banking_credit_fx, accounting_tax | 20,000 | 2,200 | 19.0% | 4 (고급) |
 | `kr_deriv_solicitor` | 파생상품투자권유대행인 | Certified Derivatives Investment Solicitor | 2 | KR | securities_investment | 40,000 | 110 | 41.6% | 2 (초급) |
 | `kr_fss_exam` | 금융감독원 종합기획직원 채용 필기시험 | Financial Supervisory Service Professional Recruitment Exam | 2 | KR | banking_credit_fx, securities_investment, insurance, accounting_tax | 0 | 1,700 | 17.4% | 4 (고급) |
 | `kr_var_ins` | 변액보험판매관리사 | Variable Life Insurance Sales Manager | 2 | KR | insurance, securities_investment | 25,000 | 60 | 55.1% | 2 (초급) |
-| `us_ea` | 미국세무사(US EA) | IRS Enrolled Agent (Special Enrollment Examination) | 2 | US | accounting_tax | 952,000 | 270 | 66.1% | 3 (중급) |
+| `us_ea` | 미국세무사(US EA) | IRS Enrolled Agent (Special Enrollment Examination) | 2 | US | accounting_tax | 952,000 | 270 | unknown | 3 (중급) |
 
 ---
 
@@ -741,7 +741,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=10"
 status: active
 summary_ko: "집합투자재산(펀드), 신탁재산 또는 투자일임재산을 운용하는 펀드매니저가 되기 위해 취득해야 하는 금융투자협회 주관 법정 전문면허 시험입니다. 주식, 채권, 파생상품, 대안투자, 포트폴리오 관리 기법 및 관련 세제와 직무윤리를 포괄적으로 검증합니다."
 usage_ko: "자산운용사 펀드매니저, 증권사 Wrap Account(랩어카운트) 운용역, 신탁 운용역의 법정 필수 자격이며 시중은행 및 증권사 공채에서 가장 인정받는 핵심 자격증입니다."
@@ -784,18 +784,21 @@ structure:
       passing_rule_ko: "응시 과목별 40% 이상, 전 과목 총점 70% 이상(70문항 이상 정답) 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 35.8
-          examinees: 24500
+          rate_pct: 36.38
+          examinees: 32297
         - period: "2024"
-          rate_pct: 34.2
-          examinees: 26100
+          rate_pct: 39.46
+          examinees: 24979
         - period: "2023"
-          rate_pct: 36.5
-          examinees: 25300
+          rate_pct: 37.69
+          examinees: 22091
         - period: "2022"
-          rate_pct: 33.9
-          examinees: 23800
-      pass_rate_avg_pct: 35.1
+          rate_pct: 36.44
+          examinees: 21580
+        - period: "2021"
+          rate_pct: 37.53
+          examinees: 23753
+      pass_rate_avg_pct: 37.5
       hours_min: 140
       hours_typical: 240
       hours_max: 350
@@ -814,7 +817,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수험 교육기관(해커스, 토마토패스, 이패스) 비전공자 합격자 평균 2~3개월(일 3시간) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 35.1
+    pass_rate_avg_pct: 37.5
 
 # ---------- E. Other costs ----------
 cost:
@@ -835,7 +838,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=10"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -847,6 +850,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -1001,7 +1008,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=07"
 status: active
 summary_ko: "금융회사 임직원으로서 일반투자자에게 장내·장외 파생상품 및 ELS, DLS 등 파생결합증권에 대한 투자 권유 및 전문 자문을 수행할 수 있는 법정 전문자격입니다."
 usage_ko: "증권사 및 선물회사 선물·옵션 창구, 파생결합증권(ELS/DLS) 판매 창구 및 파생상품 데스크 배치의 필수 자격입니다."
@@ -1044,15 +1051,15 @@ structure:
       passing_rule_ko: "과목별 40% 이상, 전 과목 70% 이상(70문항) 정답 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 32.5
-          examinees: 9200
+          rate_pct: 33.74
+          examinees: 9725
         - period: "2024"
-          rate_pct: 31.0
-          examinees: 9650
+          rate_pct: 34.25
+          examinees: 8863
         - period: "2023"
-          rate_pct: 33.8
-          examinees: 9400
-      pass_rate_avg_pct: 32.43
+          rate_pct: 36.34
+          examinees: 8896
+      pass_rate_avg_pct: 34.78
       hours_min: 90
       hours_typical: 160
       hours_max: 240
@@ -1071,7 +1078,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "파생상품 손익구조 및 수리 계산 특성상 평균 2개월(일 2~3시간) 소요"
     min_calendar_months: 2
-    pass_rate_avg_pct: 32.43
+    pass_rate_avg_pct: 34.78
 
 # ---------- E. Other costs ----------
 cost:
@@ -1092,7 +1099,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=07"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -1100,6 +1107,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -1168,16 +1179,7 @@ structure:
       duration_min: 120
       passing_rule_ko: "응시 과목별 40% 이상, 전 과목 총점 70% 이상(70문항 이상 정답) 시 합격"
       pass_rates:
-        - period: "2025"
-          rate_pct: 28.5
-          examinees: 3120
-        - period: "2024"
-          rate_pct: 26.8
-          examinees: 3350
-        - period: "2023"
-          rate_pct: 27.4
-          examinees: 3210
-      pass_rate_avg_pct: 27.57
+      pass_rate_avg_pct: unknown
       hours_min: 150
       hours_typical: 260
       hours_max: 380
@@ -1196,7 +1198,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "통계학, 주식·채권 밸류에이션 계산 문제 비중을 감안한 수험기관 권장 학습시간"
     min_calendar_months: 3
-    pass_rate_avg_pct: 27.57
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -1204,7 +1206,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -1233,7 +1235,8 @@ confidence:
   pass_rate: medium
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons: ['structure.stages[0].pass_rates: Financial Investment Association (KOFIA) does not publicly disclose official passing rates for Certified Financial Analyst.', 'difficulty.pass_rate_score: Evaluated as na per Section 4.1 rule because pass rate is unknown.']
+notes_ko: "금융투자협회에서 금융투자분석사의 공식 합격률 통계를 별도로 대외 공표하지 않아 Section 4.1 규정에 따라 합격률 기준을 제외하고 학습시간과 구조점수 평균(2.5 -> 3등급)으로 산출함."
 ```
 
 
@@ -1251,7 +1254,7 @@ region: KR
 exam_type: certificate
 domain: ['risk_compliance', 'securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=09"
 status: active
 summary_ko: "금융기관의 시장 리스크, 신용 리스크, 운영 리스크를 측정하고 VaR(Value at Risk) 모델링 및 장외파생상품 리스크를 통제·관리하는 국내 최고 난이도의 리스크 전문자격입니다."
 usage_ko: "은행 및 증권사의 리스크관리부서, 파생상품 트레이딩 데스크, 금융공학 연구팀 취업 시 최고의 전문성 입증 지표로 통용됩니다."
@@ -1294,15 +1297,21 @@ structure:
       passing_rule_ko: "과목별 40% 이상, 전 과목 총점 70% 이상(70문항 이상 정답) 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 22.4
-          examinees: 2150
+          rate_pct: 35.04
+          examinees: 722
         - period: "2024"
-          rate_pct: 21.0
-          examinees: 2380
+          rate_pct: 34.67
+          examinees: 825
         - period: "2023"
-          rate_pct: 23.5
-          examinees: 2290
-      pass_rate_avg_pct: 22.3
+          rate_pct: 28.67
+          examinees: 750
+        - period: "2022"
+          rate_pct: 39.71
+          examinees: 617
+        - period: "2021"
+          rate_pct: 38.86
+          examinees: 664
+      pass_rate_avg_pct: 35.39
       hours_min: 180
       hours_typical: 300
       hours_max: 450
@@ -1321,7 +1330,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융통계학과 장외파생 수리 계산 학습을 고려한 수험기관 평균 수험시간(일 3시간, 3~4개월)"
     min_calendar_months: 3
-    pass_rate_avg_pct: 22.3
+    pass_rate_avg_pct: 35.39
 
 # ---------- E. Other costs ----------
 cost:
@@ -1329,7 +1338,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: 3
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -1342,7 +1351,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=09"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -1350,6 +1359,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -1376,7 +1389,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=05"
 status: active
 summary_ko: "자본시장법에 따라 금융회사 소속 임직원으로서 일반투자자에게 펀드(집합투자증권)의 매매를 전문적으로 권유하거나 투자 자문을 수행할 수 있는 법정 전문인력 자격입니다."
 usage_ko: "은행 및 증권회사 영업점 창구에서 일반 고객을 대상으로 공모/사모 펀드 상품을 상담·판매하기 위한 법정 필수 자격입니다."
@@ -1419,15 +1432,21 @@ structure:
       passing_rule_ko: "과목별 40% 이상, 전 과목 70% 이상(70문항) 정답 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 41.2
-          examinees: 14500
+          rate_pct: 35.31
+          examinees: 10442
         - period: "2024"
-          rate_pct: 39.8
-          examinees: 15200
+          rate_pct: 38.06
+          examinees: 9610
         - period: "2023"
-          rate_pct: 42.5
-          examinees: 14800
-      pass_rate_avg_pct: 41.17
+          rate_pct: 32.45
+          examinees: 9700
+        - period: "2022"
+          rate_pct: 35.35
+          examinees: 8395
+        - period: "2021"
+          rate_pct: 44.94
+          examinees: 12567
+      pass_rate_avg_pct: 37.22
       hours_min: 60
       hours_typical: 110
       hours_max: 160
@@ -1446,7 +1465,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융기관 재직자 평균 수험 기간(일 2시간, 약 5~6주) 집계"
     min_calendar_months: 2
-    pass_rate_avg_pct: 41.17
+    pass_rate_avg_pct: 37.22
 
 # ---------- E. Other costs ----------
 cost:
@@ -1467,7 +1486,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=05"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -1475,6 +1494,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -1501,7 +1524,7 @@ region: KR
 exam_type: certificate
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=02"
 status: active
 summary_ko: "금융투자회사와의 위탁계약을 통해 투자자에게 펀드(집합투자증권)의 매매를 권유하거나 계약 체결을 중개하는 대행인 자격입니다. 펀드 법규, 투자자보호 기준 및 상품 기초 지식을 검정합니다."
 usage_ko: "금융권 취업 준비생의 기초 입문 자격증이자 보험설계사 및 독립재무상담사(IFA)의 펀드 판매 위탁 대행 자격으로 활용됩니다."
@@ -1544,15 +1567,21 @@ structure:
       passing_rule_ko: "응시 과목별 40% 이상, 전체 60% 이상 정답 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 58.4
-          examinees: 11200
+          rate_pct: 33.39
+          examinees: 5005
         - period: "2024"
-          rate_pct: 55.2
-          examinees: 11850
+          rate_pct: 44.76
+          examinees: 3195
         - period: "2023"
-          rate_pct: 56.8
-          examinees: 10920
-      pass_rate_avg_pct: 56.8
+          rate_pct: 34.55
+          examinees: 3751
+        - period: "2022"
+          rate_pct: 46.46
+          examinees: 3775
+        - period: "2021"
+          rate_pct: 51.73
+          examinees: 6107
+      pass_rate_avg_pct: 42.18
       hours_min: 40
       hours_typical: 80
       hours_max: 120
@@ -1571,7 +1600,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융자격증 학원 수강생 기준 평균 3~4주(일 2시간) 준비기간 집계"
     min_calendar_months: 1
-    pass_rate_avg_pct: 56.8
+    pass_rate_avg_pct: 42.18
 
 # ---------- E. Other costs ----------
 cost:
@@ -1579,7 +1608,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: 3
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1592,7 +1621,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=02"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -1600,6 +1629,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -1626,7 +1659,7 @@ region: KR
 exam_type: license
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=06"
 status: active
 summary_ko: "금융회사 임직원으로서 일반투자자를 상대로 주식, 채권 등 증권에 대한 투자 권유 및 자문을 전담할 수 있는 법정 전문자격입니다."
 usage_ko: "증권사 및 은행 영업점에서 주식 매매 브로커리지, 채권 판매, 신탁 상품 상담을 수행하기 위한 필수 자격입니다."
@@ -1669,15 +1702,15 @@ structure:
       passing_rule_ko: "과목별 40% 이상, 전 과목 70% 이상(70문항) 정답 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 38.6
-          examinees: 13800
+          rate_pct: 39.84
+          examinees: 5416
         - period: "2024"
-          rate_pct: 37.2
-          examinees: 14100
+          rate_pct: 35.98
+          examinees: 4816
         - period: "2023"
-          rate_pct: 39.4
-          examinees: 13950
-      pass_rate_avg_pct: 38.4
+          rate_pct: 41.86
+          examinees: 4417
+      pass_rate_avg_pct: 39.23
       hours_min: 70
       hours_typical: 130
       hours_max: 180
@@ -1696,7 +1729,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "금융사 신입사원 입문 교육 및 합격자 평균 6~8주(일 2~3시간) 학습시간"
     min_calendar_months: 2
-    pass_rate_avg_pct: 38.4
+    pass_rate_avg_pct: 39.23
 
 # ---------- E. Other costs ----------
 cost:
@@ -1717,7 +1750,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=06"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -1725,6 +1758,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -1751,7 +1788,7 @@ region: KR
 exam_type: certificate
 domain: ['securities_investment']
 issuer: "한국금융투자협회 (Korea Financial Investment Association)"
-official_url: "https://license.kofia.or.kr"
+official_url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=01"
 status: active
 summary_ko: "금융투자회사와 계약을 맺고 투자자에게 주식, 채권 등 증권의 매매 및 투자신탁 수익증권 매매를 권유하는 위탁 대행인 자격입니다. 자본시장법규와 주식·채권 매매 실무를 평가합니다."
 usage_ko: "증권사 및 금융회사 취업 입문 자격증, 보험설계사 및 투자상담 대행 인력의 필수 등록 자격으로 쓰입니다."
@@ -1794,15 +1831,15 @@ structure:
       passing_rule_ko: "응시 과목별 40% 이상, 전체 60% 이상 정답 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 54.1
-          examinees: 9800
+          rate_pct: 33.92
+          examinees: 2429
         - period: "2024"
-          rate_pct: 52.3
-          examinees: 10400
+          rate_pct: 34.11
+          examinees: 2929
         - period: "2023"
-          rate_pct: 53.6
-          examinees: 9950
-      pass_rate_avg_pct: 53.33
+          rate_pct: 41.32
+          examinees: 2965
+      pass_rate_avg_pct: 36.45
       hours_min: 50
       hours_typical: 90
       hours_max: 140
@@ -1821,7 +1858,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수험생 평균 1개월 내외(일 2~3시간) 준비기간 집계"
     min_calendar_months: 1
-    pass_rate_avg_pct: 53.33
+    pass_rate_avg_pct: 36.45
 
 # ---------- E. Other costs ----------
 cost:
@@ -1829,7 +1866,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: 3
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -1842,7 +1879,7 @@ difficulty:
 
 # ---------- G. Sources and confidence ----------
 sources:
-  - url: "https://license.kofia.or.kr"
+  - url: "https://license.kofia.or.kr/examInfo/examInfo.do?examId=01"
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
@@ -1850,6 +1887,10 @@ sources:
     accessed: "2026-11-11"
     type: provider
     covers: ['hours', 'pass_rate']
+  - url: "https://www.pqi.or.kr"
+    accessed: "2026-11-11"
+    type: statistics
+    covers: ['pass_rate']
 confidence:
   eligibility: high
   award: high
@@ -2046,15 +2087,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 28.5
-          examinees: 2300
+          rate_pct: 24.84
+          examinees: 1449
         - period: "2024"
-          rate_pct: 27.2
-          examinees: 2450
+          rate_pct: 19.4
+          examinees: 1000
         - period: "2023"
-          rate_pct: 29.1
-          examinees: 2380
-      pass_rate_avg_pct: 28.27
+          rate_pct: 33.29
+          examinees: 760
+      pass_rate_avg_pct: 25.84
       hours_min: 300
       hours_typical: 450
       hours_max: 650
@@ -2073,15 +2114,15 @@ structure:
       passing_rule_ko: "과목별 60점 이상 득점 시 개별 과목 합격 (5년 내 5과목 모두 통과 시 최종 합격)"
       pass_rates:
         - period: "2025"
-          rate_pct: 23.4
-          examinees: 1580
+          rate_pct: 52.9
+          examinees: 120
         - period: "2024"
-          rate_pct: 21.8
-          examinees: 1690
+          rate_pct: 51.0
+          examinees: 126
         - period: "2023"
-          rate_pct: 22.5
-          examinees: 1620
-      pass_rate_avg_pct: 22.57
+          rate_pct: 50.1
+          examinees: 126
+      pass_rate_avg_pct: 51.33
       hours_min: 600
       hours_typical: 950
       hours_max: 1400
@@ -2100,7 +2141,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "수학/통계 전공자 기준 2차 5과목 합격까지의 평균 수험 기간(2~3년, 약 1,400시간)"
     min_calendar_months: 14
-    pass_rate_avg_pct: 25.42
+    pass_rate_avg_pct: 38.59
 
 # ---------- E. Other costs ----------
 cost:
@@ -2108,7 +2149,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: 3
   hours_score: 5
   structure_points:
     subjects_3_or_more: true
@@ -2198,15 +2239,15 @@ structure:
       passing_rule_ko: "모듈별 40점 이상, 전 모듈 평균 70점 이상 득점 시 전체 합격 (한 모듈만 충족 시 부분합격)"
       pass_rates:
         - period: "2025"
-          rate_pct: 33.8
-          examinees: 7200
+          rate_pct: 32.8
+          examinees: 5600
         - period: "2024"
-          rate_pct: 31.5
-          examinees: 7800
+          rate_pct: 33.1
+          examinees: 5547
         - period: "2023"
-          rate_pct: 32.7
-          examinees: 7500
-      pass_rate_avg_pct: 32.67
+          rate_pct: 31.8
+          examinees: 5420
+      pass_rate_avg_pct: 32.57
       hours_min: 120
       hours_typical: 200
       hours_max: 300
@@ -2225,7 +2266,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "지정 교육 이수 및 시험 대비 집중 학습 평균 2개월(일 3시간) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 32.67
+    pass_rate_avg_pct: 32.57
 
 # ---------- E. Other costs ----------
 cost:
@@ -2327,15 +2368,15 @@ structure:
       passing_rule_ko: "지식형과 사례형 각각 100점 만점 기준 70점 이상 득점 시 합격"
       pass_rates:
         - period: "2025"
-          rate_pct: 23.4
-          examinees: 1820
+          rate_pct: 33.2
+          examinees: 220
         - period: "2024"
-          rate_pct: 21.8
-          examinees: 1950
+          rate_pct: 34.5
+          examinees: 209
         - period: "2023"
-          rate_pct: 24.2
-          examinees: 1880
-      pass_rate_avg_pct: 23.13
+          rate_pct: 32.1
+          examinees: 215
+      pass_rate_avg_pct: 33.27
       hours_min: 300
       hours_typical: 500
       hours_max: 750
@@ -2354,7 +2395,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "선행 AFPK 취득 후 CFP 정규 인강(200시간) 및 재무계산기 복합 사례 연습(4~6개월)"
     min_calendar_months: 5
-    pass_rate_avg_pct: 23.13
+    pass_rate_avg_pct: 33.27
 
 # ---------- E. Other costs ----------
 cost:
@@ -2362,7 +2403,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: 3
   hours_score: 4
   structure_points:
     subjects_3_or_more: true
@@ -2456,15 +2497,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 32.1
-          examinees: 6800
+          rate_pct: 35.05
+          examinees: 6913
         - period: "2024"
-          rate_pct: 30.5
-          examinees: 7100
+          rate_pct: 31.68
+          examinees: 6022
         - period: "2023"
-          rate_pct: 31.0
-          examinees: 6950
-      pass_rate_avg_pct: 31.2
+          rate_pct: 32.78
+          examinees: 5238
+      pass_rate_avg_pct: 33.17
       hours_min: 180
       hours_typical: 280
       hours_max: 400
@@ -2483,15 +2524,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점 (상대평가 최소선발인원 적용)"
       pass_rates:
         - period: "2025"
-          rate_pct: 18.2
-          examinees: 2850
+          rate_pct: 13.2
+          examinees: 2621
         - period: "2024"
-          rate_pct: 17.1
-          examinees: 2980
+          rate_pct: 15.2
+          examinees: 2269
         - period: "2023"
-          rate_pct: 17.2
-          examinees: 2920
-      pass_rate_avg_pct: 17.5
+          rate_pct: 15.65
+          examinees: 2192
+      pass_rate_avg_pct: 14.68
       hours_min: 350
       hours_typical: 550
       hours_max: 800
@@ -2510,7 +2551,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "1차 및 2차 주관식 논술 수험생 평균 학습기간(1년~1년 6개월, 일 4시간) 집계"
     min_calendar_months: 10
-    pass_rate_avg_pct: 24.35
+    pass_rate_avg_pct: 23.93
 
 # ---------- E. Other costs ----------
 cost:
@@ -2737,15 +2778,15 @@ structure:
       passing_rule_ko: "매 과목 40% 이상, 총점 60% 이상 득점자 중 고득점자순 상대평가 선발"
       pass_rates:
         - period: "2025"
-          rate_pct: 18.4
-          examinees: 15800
+          rate_pct: 20.42
+          examinees: 14259
         - period: "2024"
-          rate_pct: 17.5
-          examinees: 16900
+          rate_pct: 20.88
+          examinees: 14472
         - period: "2023"
-          rate_pct: 19.1
-          examinees: 15300
-      pass_rate_avg_pct: 18.33
+          rate_pct: 19.11
+          examinees: 13733
+      pass_rate_avg_pct: 20.14
       hours_min: 1000
       hours_typical: 1500
       hours_max: 2000
@@ -2764,15 +2805,15 @@ structure:
       passing_rule_ko: "과목별 60% 이상 득점 시 합격 (절대평가 원칙, 미달 시 고득점순 최소선발예정인원 1,250명 선발)"
       pass_rates:
         - period: "2025"
-          rate_pct: 28.5
-          examinees: 4350
+          rate_pct: 27.86
+          examinees: 4308
         - period: "2024"
-          rate_pct: 27.8
-          examinees: 4500
+          rate_pct: 28.04
+          examinees: 4458
         - period: "2023"
-          rate_pct: 28.9
-          examinees: 4200
-      pass_rate_avg_pct: 28.4
+          rate_pct: 26.27
+          examinees: 4187
+      pass_rate_avg_pct: 27.39
       hours_min: 800
       hours_typical: 1300
       hours_max: 2000
@@ -2791,7 +2832,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "합격자 평균 전업 수험 기간(2.5년~3.5년, 일 8~10시간) 기준"
     min_calendar_months: 16
-    pass_rate_avg_pct: 23.37
+    pass_rate_avg_pct: 23.77
 
 # ---------- E. Other costs ----------
 cost:
@@ -2889,15 +2930,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 17.8
-          examinees: 17500
+          rate_pct: 18.09
+          examinees: 16856
         - period: "2024"
-          rate_pct: 16.2
-          examinees: 18200
+          rate_pct: 17.15
+          examinees: 18842
         - period: "2023"
-          rate_pct: 18.5
-          examinees: 16800
-      pass_rate_avg_pct: 17.5
+          rate_pct: 15.72
+          examinees: 13768
+      pass_rate_avg_pct: 16.99
       hours_min: 800
       hours_typical: 1200
       hours_max: 1600
@@ -2916,15 +2957,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점 (미달 시 최소선발인원 약 700명 순위 선발)"
       pass_rates:
         - period: "2025"
-          rate_pct: 12.8
-          examinees: 6500
+          rate_pct: 10.48
+          examinees: 6943
         - period: "2024"
-          rate_pct: 11.9
-          examinees: 6800
+          rate_pct: 13.15
+          examinees: 5437
         - period: "2023"
-          rate_pct: 13.2
-          examinees: 6400
-      pass_rate_avg_pct: 12.63
+          rate_pct: 11.36
+          examinees: 6317
+      pass_rate_avg_pct: 11.66
       hours_min: 900
       hours_typical: 1400
       hours_max: 2000
@@ -2943,7 +2984,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "전업 수험생 평균 수험기간(2~3년, 일 8시간) 기준"
     min_calendar_months: 16
-    pass_rate_avg_pct: 15.07
+    pass_rate_avg_pct: 14.33
 
 # ---------- E. Other costs ----------
 cost:
@@ -2951,7 +2992,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 4
+  pass_rate_score: 5
   hours_score: 5
   structure_points:
     subjects_3_or_more: true
@@ -2959,7 +3000,7 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: true
   structure_score: 4
-  level: 4
+  level: 5
   rationale_ko: "방대한 세법전과 조세 판례를 주관식으로 서술해야 하는 고난도 평가로 2차 합격률이 12%대에 불과하며 6개월 실무수습이 필수입니다."
 
 # ---------- G. Sources and confidence ----------
@@ -3041,15 +3082,21 @@ structure:
       passing_rule_ko: "3과목 모두 과목별 100점 만점 기준 70점 이상 득점 시 합격 (한 과목이라도 70점 미만 시 불합격)"
       pass_rates:
         - period: "2025"
-          rate_pct: 36.2
-          examinees: 38500
+          rate_pct: 24.84
+          examinees: 24624
         - period: "2024"
-          rate_pct: 34.8
-          examinees: 41200
+          rate_pct: 25.98
+          examinees: 23405
         - period: "2023"
-          rate_pct: 35.5
-          examinees: 39800
-      pass_rate_avg_pct: 35.5
+          rate_pct: 26.78
+          examinees: 20223
+        - period: "2022"
+          rate_pct: 23.91
+          examinees: 17553
+        - period: "2021"
+          rate_pct: 32.14
+          examinees: 16607
+      pass_rate_avg_pct: 26.73
       hours_min: 140
       hours_typical: 240
       hours_max: 360
@@ -3068,7 +3115,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "비전공자 합격자 평균 수험기간(일 3시간, 2~3개월) 기준"
     min_calendar_months: 2
-    pass_rate_avg_pct: 35.5
+    pass_rate_avg_pct: 26.73
 
 # ---------- E. Other costs ----------
 cost:
@@ -3076,7 +3123,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: 4
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -3093,7 +3140,7 @@ sources:
     accessed: "2026-11-11"
     type: official
     covers: ['eligibility', 'structure', 'fee']
-  - url: "https://pqi.or.kr"
+  - url: "https://www.pqi.or.kr"
     accessed: "2026-11-11"
     type: statistics
     covers: ['pass_rate']
@@ -3541,15 +3588,21 @@ structure:
       passing_rule_ko: "과목별 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 36.8
-          examinees: 3100
+          rate_pct: 54.24
+          examinees: 3761
         - period: "2024"
-          rate_pct: 35.5
-          examinees: 3300
+          rate_pct: 66.64
+          examinees: 2305
         - period: "2023"
-          rate_pct: 37.0
-          examinees: 3250
-      pass_rate_avg_pct: 36.43
+          rate_pct: 60.89
+          examinees: 2025
+        - period: "2022"
+          rate_pct: 60.81
+          examinees: 1480
+        - period: "2021"
+          rate_pct: 54.44
+          examinees: 1848
+      pass_rate_avg_pct: 59.4
       hours_min: 80
       hours_typical: 150
       hours_max: 220
@@ -3568,7 +3621,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "민사집행법 및 채권회수 실무 평균 2개월(일 2~3시간) 수험"
     min_calendar_months: 2
-    pass_rate_avg_pct: 36.43
+    pass_rate_avg_pct: 59.4
 
 # ---------- E. Other costs ----------
 cost:
@@ -3576,7 +3629,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 3
+  pass_rate_score: 2
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -3666,15 +3719,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점"
       pass_rates:
         - period: "2025"
-          rate_pct: 24.5
-          examinees: 3800
+          rate_pct: 15.43
+          examinees: 1412
         - period: "2024"
-          rate_pct: 23.8
-          examinees: 4100
+          rate_pct: 25.42
+          examinees: 1499
         - period: "2023"
-          rate_pct: 25.0
-          examinees: 3950
-      pass_rate_avg_pct: 24.43
+          rate_pct: 24.77
+          examinees: 1635
+      pass_rate_avg_pct: 21.87
       hours_min: 600
       hours_typical: 900
       hours_max: 1300
@@ -3693,15 +3746,15 @@ structure:
       passing_rule_ko: "매 과목 40점 이상, 전 과목 평균 60점 이상 득점 (미달 시 최소선발인원 약 90명 고득점순 선발)"
       pass_rates:
         - period: "2025"
-          rate_pct: 11.8
-          examinees: 850
+          rate_pct: 19.56
+          examinees: 460
         - period: "2024"
-          rate_pct: 10.9
-          examinees: 920
+          rate_pct: 14.83
+          examinees: 607
         - period: "2023"
-          rate_pct: 12.1
-          examinees: 880
-      pass_rate_avg_pct: 11.6
+          rate_pct: 13.87
+          examinees: 649
+      pass_rate_avg_pct: 16.09
       hours_min: 800
       hours_typical: 1300
       hours_max: 1900
@@ -3720,7 +3773,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "전업 수험생 평균 수험기간(2~3년, 일 8~10시간) 기준"
     min_calendar_months: 16
-    pass_rate_avg_pct: 18.02
+    pass_rate_avg_pct: 18.98
 
 # ---------- E. Other costs ----------
 cost:
@@ -5883,16 +5936,7 @@ structure:
       duration_min: 75
       passing_rule_ko: "약 71.7% 이상 정답(43문항 이상 정답) 시 합격"
       pass_rates:
-        - period: "2025"
-          rate_pct: 81.0
-          examinees: 38000
-        - period: "2024"
-          rate_pct: 80.5
-          examinees: 40500
-        - period: "2023"
-          rate_pct: 80.0
-          examinees: 39000
-      pass_rate_avg_pct: 80.5
+      pass_rate_avg_pct: unknown
       hours_min: 20
       hours_typical: 40
       hours_max: 60
@@ -5911,7 +5955,7 @@ structure:
     hours_basis: official
     hours_basis_note_ko: "주요 수험서 기준 평균 30~45시간(약 1~2주) 단기 집중 학습"
     min_calendar_months: 1
-    pass_rate_avg_pct: 80.5
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -5919,7 +5963,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 1
+  pass_rate_score: na
   hours_score: 1
   structure_points:
     subjects_3_or_more: true
@@ -5927,7 +5971,7 @@ difficulty:
     stages_3_or_more: false
     non_written_assessment: false
   structure_score: 2
-  level: 1
+  level: 2
   rationale_ko: "문항 수가 60문항에 불과하고 합격률이 80%를 넘으며 40시간 내외로 단기 합격이 가능한 입문 난이도(1단계) 자격입니다."
 
 # ---------- G. Sources and confidence ----------
@@ -5948,7 +5992,8 @@ confidence:
   pass_rate: high
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons: ['structure.stages[0].pass_rates: NASAA and FINRA do not officially publish ongoing aggregate pass-rate statistics for state law exams.', 'difficulty.pass_rate_score: Dropped to na per Section 4.1 rule because pass rate is unknown.']
+notes_ko: "NASAA 및 FINRA에서 공식 주정부 시험 합격률을 공표하지 않으므로 Section 4.1 규정에 따라 합격률 기준을 제외하고 학습시간과 구조점수 평균으로 산출함."
 ```
 
 
@@ -6008,16 +6053,7 @@ structure:
       duration_min: 180
       passing_rule_ko: "약 70.7% 이상 정답(92문항 이상 정답) 시 합격"
       pass_rates:
-        - period: "2025"
-          rate_pct: 68.0
-          examinees: 31000
-        - period: "2024"
-          rate_pct: 67.5
-          examinees: 33000
-        - period: "2023"
-          rate_pct: 66.8
-          examinees: 32100
-      pass_rate_avg_pct: 67.43
+      pass_rate_avg_pct: unknown
       hours_min: 60
       hours_typical: 100
       hours_max: 150
@@ -6036,7 +6072,7 @@ structure:
     hours_basis: official
     hours_basis_note_ko: "주요 수험 교육기관 기준 약 80~120시간(약 4~6주) 권장"
     min_calendar_months: 2
-    pass_rate_avg_pct: 67.43
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -6044,7 +6080,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: na
   hours_score: 2
   structure_points:
     subjects_3_or_more: true
@@ -6073,7 +6109,8 @@ confidence:
   pass_rate: high
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons: ['structure.stages[0].pass_rates: NASAA and FINRA do not officially publish ongoing aggregate pass-rate statistics for the Series 65 exam.', 'difficulty.pass_rate_score: Dropped to na per Section 4.1 rule because pass rate is unknown.']
+notes_ko: "NASAA 및 FINRA에서 공식 합격률을 공표하지 않으므로 규정에 따라 합격률 점수를 제외하고 학습시간과 구조점수의 평균으로 산출함."
 ```
 
 
@@ -6383,16 +6420,7 @@ structure:
       duration_min: 630
       passing_rule_ko: "스케일 점수 105점 이상(40~130점 스케일, 약 70% 이상) 득점 시 파트별 합격"
       pass_rates:
-        - period: "2025"
-          rate_pct: 66.0
-          examinees: 15000
-        - period: "2024"
-          rate_pct: 65.2
-          examinees: 16200
-        - period: "2023"
-          rate_pct: 67.0
-          examinees: 15800
-      pass_rate_avg_pct: 66.07
+      pass_rate_avg_pct: unknown
       hours_min: 180
       hours_typical: 270
       hours_max: 380
@@ -6411,7 +6439,7 @@ structure:
     hours_basis: provider
     hours_basis_note_ko: "Gleim, Fast Forward Academy 등 파트당 약 80~100시간(총 270시간, 약 4~6개월) 권장"
     min_calendar_months: 4
-    pass_rate_avg_pct: 66.07
+    pass_rate_avg_pct: unknown
 
 # ---------- E. Other costs ----------
 cost:
@@ -6419,7 +6447,7 @@ cost:
 
 # ---------- F. Difficulty (Section 4.1) ----------
 difficulty:
-  pass_rate_score: 2
+  pass_rate_score: na
   hours_score: 3
   structure_points:
     subjects_3_or_more: true
@@ -6448,7 +6476,8 @@ confidence:
   pass_rate: high
   fee: high
 as_of: "2026-11-11"
-unknown_reasons: []
+unknown_reasons: ['structure.stages[0].pass_rates: The IRS does not officially publish comprehensive aggregate pass rates for the Special Enrollment Examination (SEE).', 'difficulty.pass_rate_score: Dropped to na per Section 4.1 rule because official pass rate is unknown.']
+notes_ko: "미국 연방국세청(IRS)에서 SEE 시험의 공식 합격률 통계를 대외 공표하지 않으므로 Section 4.1 규정에 따라 합격률 기준을 제외하고 평가함."
 ```
 
 
