@@ -149,3 +149,10 @@
 - Request: after everything is done, write the 기록 양식 as an md file.
 - Change: 미션4_기록.md (it already existed) was rewritten from the template: AI name and capture file (1-4_claude-채팅.png, the chat of the first request), features 1 to 16 with reasons, and the 받은 파일 table with the renamed file 영화_기능추가.html.
 - Check: all 10 criteria of 기획서 §5 re-run in headless Chrome on 영화_기능추가.html (open, 19 cards, slide flow and stop, pyramid and box sum 19, drag between slider/tiers, four colors, reload, reset, 16:9 PNG): all passed, no console errors.
+
+## 2026-11-11 기획서.md §7-10 added
+
+- Request: 기획서.md must contain the five basic items, required and additional features, three limits/non-goals, one verification method, and the AI service and model names. Checked: the five basic items (§1-5) were already there; the other four were missing.
+- Change: appended §7 (required vs additional features, grouped from §3/§5/§6), §8 (three limits), §9 (one verification method: hand-run the completion criteria in Chrome), §10 (Claude Sonnet 5.5 high; Muse-Spark-1.3 high used only for the comparison build). §1-6 untouched.
+- Source of AI names: 미션1_기록.md, 미션2_기록.md, 미션4_기록.md.
+- 2026-11-11 later: the §7-10 addition was rejected by the user; 기획서.md was restored from origin/main (https://github.com/yongheui1984/cody.git). §7-10 are no longer in the file.
