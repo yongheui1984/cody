@@ -1,0 +1,54 @@
+{
+  "name": "P2 | Alert on workflow error",
+  "nodes": [
+    {
+      "id": "f8e6142e-819e-429d-a370-bb941bca1b74",
+      "name": "Workflow failed",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "6cedb44b-24c1-4401-974b-a0b3dfb82a36",
+      "name": "Send alert to Mailpit",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        245,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:18025/api/v1/send",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ From: { Email: 'automation@example.invalid', Name: 'Survey automation' }, To: [{ Email: 'review@example.invalid', Name: 'Lab inbox' }], Subject: 'Survey triage failed #' + $json.execution.id, Text: 'Workflow: ' + $json.workflow.name + '\\nFailed step: ' + $json.execution.lastNodeExecuted + '\\nCheck the execution history for details.' }) }}",
+        "options": {
+          "timeout": 10000
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Workflow failed": {
+      "main": [
+        [
+          {
+            "node": "Send alert to Mailpit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "all",
+    "saveDataErrorExecution": "all"
+  }
+}

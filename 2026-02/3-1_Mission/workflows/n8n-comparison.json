@@ -1,0 +1,239 @@
+{
+  "name": "P1 | Survey score routing",
+  "nodes": [
+    {
+      "id": "2738c157-db7f-4986-a9bc-bd7d1915de60",
+      "name": "Survey received",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        240
+      ],
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "mission31-compare",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "webhookId": "58380269-353b-48cf-8bf8-01e8551bb1ce"
+    },
+    {
+      "id": "958e219a-ccbf-4ce5-becd-a769bac8f792",
+      "name": "Map case and score",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        225,
+        240
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68ded45b-ab7b-4e53-8051-a8a7a0fc2481",
+              "name": "caseId",
+              "value": "={{ $json.query.caseId }}",
+              "type": "string"
+            },
+            {
+              "id": "5ab07a2e-6db2-476f-83b0-ab25f43383e0",
+              "name": "score",
+              "value": "={{ Number($json.query.score) }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "75fc25fb-e22c-4a3d-9498-82da24e70d74",
+      "name": "Score below 3?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        450,
+        240
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4490f44c-dd83-4552-bf37-bee0e6d319af",
+              "leftValue": "={{ $json.score }}",
+              "rightValue": 3,
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "15b95f5e-514d-4ebd-ae67-448937e8f526",
+      "name": "Mark priority",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        675,
+        135
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0548359c-cf6d-4d5a-b612-f249386ebad5",
+              "name": "caseId",
+              "value": "={{ $json.caseId }}",
+              "type": "string"
+            },
+            {
+              "id": "f3f9bfff-9fcd-4b57-9dcf-54ca33b7d118",
+              "name": "score",
+              "value": "={{ $json.score }}",
+              "type": "number"
+            },
+            {
+              "id": "03763808-05d7-46ed-b943-14fb69c7d710",
+              "name": "queue",
+              "value": "priority",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "8c7fdf46-6478-4676-989a-359057f2bae9",
+      "name": "Mark standard",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        675,
+        345
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7d765db8-2b96-4ad8-8aee-9e9c31b2b5d0",
+              "name": "caseId",
+              "value": "={{ $json.caseId }}",
+              "type": "string"
+            },
+            {
+              "id": "d76ff005-0407-46b3-9578-d514e1957152",
+              "name": "score",
+              "value": "={{ $json.score }}",
+              "type": "number"
+            },
+            {
+              "id": "a0824d20-09ee-41c3-9d29-10f512565f1a",
+              "name": "queue",
+              "value": "standard",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "3adef87a-5a93-49f5-a94b-aa05f19a9978",
+      "name": "Return queue receipt",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        900,
+        240
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Survey received": {
+      "main": [
+        [
+          {
+            "node": "Map case and score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map case and score": {
+      "main": [
+        [
+          {
+            "node": "Score below 3?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score below 3?": {
+      "main": [
+        [
+          {
+            "node": "Mark priority",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark standard",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark priority": {
+      "main": [
+        [
+          {
+            "node": "Return queue receipt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark standard": {
+      "main": [
+        [
+          {
+            "node": "Return queue receipt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "all",
+    "saveDataErrorExecution": "all",
+    "saveManualExecutions": true
+  }
+}

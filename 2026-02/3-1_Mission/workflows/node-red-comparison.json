@@ -1,0 +1,153 @@
+[
+  {
+    "id": "survey-compare",
+    "type": "tab",
+    "label": "P1 | Survey score routing",
+    "disabled": false,
+    "info": "Shared test fixtures use only fictional scores. GET /mission31-compare?caseId=C-02&score=2"
+  },
+  {
+    "id": "survey-in",
+    "type": "http in",
+    "name": "Survey received",
+    "z": "survey-compare",
+    "x": 155,
+    "y": 160,
+    "wires": [
+      [
+        "survey-map"
+      ]
+    ],
+    "url": "/mission31-compare",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": ""
+  },
+  {
+    "id": "survey-map",
+    "type": "change",
+    "name": "Map case and score",
+    "z": "survey-compare",
+    "x": 368,
+    "y": 160,
+    "wires": [
+      [
+        "survey-if"
+      ]
+    ],
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "{\"caseId\": req.query.caseId, \"score\": $number(req.query.score)}",
+        "tot": "jsonata"
+      }
+    ]
+  },
+  {
+    "id": "survey-if",
+    "type": "switch",
+    "name": "Score below 3?",
+    "z": "survey-compare",
+    "x": 570,
+    "y": 160,
+    "wires": [
+      [
+        "survey-priority"
+      ],
+      [
+        "survey-standard"
+      ]
+    ],
+    "property": "payload.score",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "lt",
+        "v": "3",
+        "vt": "num"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 2
+  },
+  {
+    "id": "survey-priority",
+    "type": "change",
+    "name": "Mark priority",
+    "z": "survey-compare",
+    "x": 765,
+    "y": 100,
+    "wires": [
+      [
+        "survey-response",
+        "survey-debug"
+      ]
+    ],
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "{\"caseId\": payload.caseId, \"score\": $number(payload.score), \"queue\": \"priority\"}",
+        "tot": "jsonata"
+      }
+    ]
+  },
+  {
+    "id": "survey-standard",
+    "type": "change",
+    "name": "Mark standard",
+    "z": "survey-compare",
+    "x": 765,
+    "y": 220,
+    "wires": [
+      [
+        "survey-response",
+        "survey-debug"
+      ]
+    ],
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "{\"caseId\": payload.caseId, \"score\": $number(payload.score), \"queue\": \"standard\"}",
+        "tot": "jsonata"
+      }
+    ]
+  },
+  {
+    "id": "survey-response",
+    "type": "http response",
+    "name": "Return queue receipt",
+    "z": "survey-compare",
+    "x": 1000,
+    "y": 100,
+    "wires": [],
+    "statusCode": "200",
+    "headers": {}
+  },
+  {
+    "id": "survey-debug",
+    "type": "debug",
+    "name": "Run result",
+    "z": "survey-compare",
+    "x": 985,
+    "y": 220,
+    "wires": [],
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto"
+  }
+]

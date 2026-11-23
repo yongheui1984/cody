@@ -1,0 +1,87 @@
+{
+  "name": "Bonus | Local web app",
+  "nodes": [
+    {
+      "id": "f03ce6cd-b437-453c-9371-5c4631655709",
+      "name": "Open web app",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "mission31-script",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "webhookId": "3841c588-cba5-4d5c-9eba-0eb2f481e23d"
+    },
+    {
+      "id": "bf612130-8874-45e4-90dc-a11fe48b8e7e",
+      "name": "Return a page",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return [{ json: { html: '<!doctype html><html lang=\"ko\"><meta charset=\"utf-8\"><title>설문 접수 실습</title><main><h1>설문 접수 실습 v1</h1></main></html>' } }];"
+      }
+    },
+    {
+      "id": "498e7b99-3018-4ffe-ab93-c74024b584b6",
+      "name": "Serve HTML",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.html }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=utf-8"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Open web app": {
+      "main": [
+        [
+          {
+            "node": "Return a page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return a page": {
+      "main": [
+        [
+          {
+            "node": "Serve HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
