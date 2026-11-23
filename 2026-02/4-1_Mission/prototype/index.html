@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>손끝 · 동네 공예 클래스</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <section id="home" class="screen home" aria-labelledby="home-title">
+      <header class="masthead"><span class="wordmark">손끝<span>.</span></span><span class="location">⌖ 서울 · 성수</span></header>
+      <div class="intro">
+        <p class="eyebrow">동네 공방에서 보내는 하루</p>
+        <h1 id="home-title" tabindex="-1">손으로 빚는<br>나만의 시간</h1>
+        <p>가까운 공방에서 처음 만들어보는 즐거움.</p>
+      </div>
+      <figure class="hero"><img src="assets/main.jpg" alt="햇살이 드는 공방에서 도자기 그릇을 빚는 모습"><figcaption>이번 주 추천 · 성수 도예</figcaption></figure>
+      <a class="feature" href="#detail" data-hotspot="A">
+        <span><small>이번 주말에 열려요</small><strong>물레로 빚는 나만의 그릇</strong></span><span class="arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="browse" href="#list" data-hotspot="B">모든 클래스 보기 <span aria-hidden="true">→</span></a>
+      <nav class="tabs" aria-label="주 메뉴"><a href="#home" aria-current="page">홈</a><a href="#list">클래스 탐색</a></nav>
+    </section>
+
+    <section id="list" class="screen listing" aria-labelledby="list-title" hidden>
+      <header class="masthead subhead"><a class="back" href="#home" aria-label="홈으로 돌아가기" data-hotspot="D">←</a><span class="wordmark">손끝<span>.</span></span><span class="location">⌖ 서울 · 성수</span></header>
+      <div class="intro">
+        <p class="eyebrow">성수동 주변 공방</p>
+        <h1 id="list-title" tabindex="-1">클래스 탐색</h1>
+        <p id="class-count" aria-live="polite">가까운 공방의 수업 3개</p>
+      </div>
+      <div class="filters" role="group" aria-label="공예 종류">
+        <button type="button" data-filter="all" aria-pressed="true">전체</button>
+        <button type="button" data-filter="pottery" aria-pressed="false">도예</button>
+        <button type="button" data-filter="flower" aria-pressed="false">꽃 공예</button>
+      </div>
+      <div class="classes">
+        <article class="class" data-category="pottery">
+          <img src="assets/cups.jpg" alt="천 위에 나란히 놓인 컵 두 개">
+          <div><p class="eyebrow">도예 · 성수</p><h2>두 손으로 만드는 흙컵</h2><p>토 11:00 · 90분</p><strong>38,000원</strong></div>
+        </article>
+        <a class="class featured-class" href="#detail" data-category="pottery" data-hotspot="C">
+          <img src="assets/detail.jpg" alt="물레 위의 그릇을 손으로 빚는 모습">
+          <div><p class="eyebrow">도예 · 성수</p><h2>물레로 빚는 나만의 그릇</h2><p>일 14:00 · 120분</p><strong>48,000원</strong></div>
+          <span class="row-arrow" aria-hidden="true">↗</span>
+        </a>
+        <article class="class" data-category="flower">
+          <img src="assets/flowers.jpg" alt="작은 말린 꽃다발을 묶는 손">
+          <div><p class="eyebrow">꽃 공예 · 서울숲</p><h2>오래 두고 보는 꽃다발</h2><p>일 11:00 · 60분</p><strong>32,000원</strong></div>
+        </article>
+      </div>
+      <nav class="tabs" aria-label="주 메뉴"><a href="#home">홈</a><a href="#list" aria-current="page">클래스 탐색</a></nav>
+    </section>
+
+    <section id="detail" class="screen detail" aria-labelledby="detail-title" hidden>
+      <header class="masthead subhead"><a class="back" href="#list" aria-label="클래스 목록으로 돌아가기" data-hotspot="E">←</a><span class="wordmark">손끝<span>.</span></span><span class="location">⌖ 서울 · 성수</span></header>
+      <figure class="detail-photo"><img src="assets/detail.jpg" alt="물레 위 흙그릇의 가장자리를 다듬는 손"></figure>
+      <div class="detail-copy">
+        <p class="eyebrow">도예 · 성수 작은흙공방</p>
+        <h1 id="detail-title" tabindex="-1">물레로 빚는<br>나만의 그릇</h1>
+        <dl class="facts">
+          <div><dt>일정</dt><dd>일요일 14:00</dd></div>
+          <div><dt>소요 시간</dt><dd>120분</dd></div>
+          <div><dt>난이도</dt><dd>입문</dd></div>
+        </dl>
+        <p class="description">물레 위에서 흙의 모양이 바뀌는 순간을 느껴보세요. 강사와 함께 기본기를 익힌 뒤 작은 그릇 한 점을 완성해요.</p>
+      </div>
+      <footer class="reserve"><div><small>1인 기준</small><strong>48,000원</strong></div><button type="button" id="reserve" data-hotspot="F">예약 내용 확인 <span aria-hidden="true">→</span></button></footer>
+    </section>
+
+    <dialog id="booking" aria-labelledby="booking-title">
+      <p class="eyebrow">예약 미리보기</p>
+      <h2 id="booking-title">물레로 빚는 나만의 그릇</h2>
+      <p>일요일 14:00 · 120분 · 1인 48,000원</p>
+      <p>시연용 화면입니다.</p>
+      <form method="dialog"><button autofocus>닫기</button></form>
+    </dialog>
+  </main>
+</body>
+</html>
